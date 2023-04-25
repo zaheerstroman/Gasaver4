@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/btnMenu"
+        android:title="Menu"
+
+        app:tint="@color/primaryColor"
+        app:drawableTint="@color/primaryColor"
+        />
+
+
+    <item
+        android:id="@+id/btnNormal"
+        android:title="Default"
+
+        android:background="#55000000"
+        app:backgroundTint="#55000000"
+        />
+
+    <item
+        android:id="@+id/btnSatellite"
+        android:title="Satellite"
+
+        android:alpha="0.4"
+        android:backgroundTintMode="src_over"
+        />
+
+    <item
+        android:id="@+id/btnTerrain"
+        android:title="Terrain"
+
+        android:backgroundTint="#80FFFFFF"
+        />
+
+    <!--    Hybrid = Graph-->
+    <item
+        android:id="@+id/btnHybrid"
+        android:title="Hybrid"
+
+        android:alpha="0.4"
+        android:backgroundTintMode="src_over"
+        android:backgroundTint="#80FFFFFF"
+        />
+
+    <item
+        android:id="@+id/btnSearchPlus"
+        android:title="Search Plus"
+
+        android:backgroundTintMode="src_over"
+        android:backgroundTint="#80FFFFFF"
+        />
+
+    <item
+        android:id="@+id/btnReward"
+        android:title="Reward" />
+
+    <item
+        android:id="@+id/btnSetting"
+        android:title="Setting" />
+
+    <item
+        android:id="@+id/btnGalary"
+        android:title="Galary" />
+
+    <item
+        android:id="@+id/btnPlus"
+        android:title="Plus" />
+
+    <item
+        android:id="@+id/btnMaines"
+        android:title="Maines" />
+
+
+</menu>

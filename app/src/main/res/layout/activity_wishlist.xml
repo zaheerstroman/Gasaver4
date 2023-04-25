@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--    android:id="@+id/cv_station"-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.WishListActivity">
+
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_List"
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/fueldistanceemployeelistlayout"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ll_no_data"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/no_data"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"/>
+        <TextView
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="No Records Found"/>
+    </LinearLayout>
+
+
+</LinearLayout>

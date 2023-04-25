@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+        <item>
+            <shape
+                android:shape="rectangle">
+                <corners android:radius="45dp" />
+            <stroke android:width="2dp" android:color="@color/colorTextGray" />
+                <solid android:color="#9EFFFFFF"/>
+            <padding android:bottom="3dp" android:left="5dp" android:right="20dp" android:top="3dp"/>
+        </shape>
+        </item>
+        <item ><bitmap android:gravity="right|center" android:src="@mipmap/dropdown"/>
+        </item>
+    </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_nav_graph"
+    app:startDestination="@id/btnHome"
+
+    app:backgroundTint="#55000000"
+    android:background="#55000000"
+    >
+
+    <fragment
+        android:id="@+id/btnHome"
+        android:name="com.gasaver.fragment.HomeFragmentGasaver"
+        android:label="Home"
+        tools:layout="@layout/fragment_home_gasaver"
+
+        app:backgroundTint="@color/transparent"
+        android:background="@color/transparent"
+        />
+
+
+</navigation>

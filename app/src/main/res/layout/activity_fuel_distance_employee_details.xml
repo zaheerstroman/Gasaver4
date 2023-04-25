@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FuelDistanceEmployeeDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/dfadlfjl"
+        android:background="@drawable/roundedcorner"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Employee Id"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userid"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Name"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Email"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/useremail"
+                android:layout_width="wrap_content"
+                android:textColor="#547CEA"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Phonenumber"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userphonenumber"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#547CEA"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="User Addressi"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userAddressi"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#547CEA"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Latitude"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userLatitude"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#547CEA"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Longitude"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userLongitude"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#547CEA"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Brand"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userBrand"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#547CEA"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Distance"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/userDistance"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:textColor="#547CEA"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Address"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:id="@+id/useraddresstreet"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/useraddresssuite"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/useraddresscity"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/useraddresszipcode"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dfadlfjl"
+        android:background="@drawable/roundedcorner"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/hhhhh"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Company Details"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/usercompanydetails"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/aaaa"
+            android:layout_below="@+id/hhhhh"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Company Name"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text=":"
+                android:layout_height="50dp"/>
+            <TextView
+                android:id="@+id/usercompanyname"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/aaaa"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:text="website" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp"
+                android:text=":" />
+
+            <TextView
+                android:id="@+id/userwebsite"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

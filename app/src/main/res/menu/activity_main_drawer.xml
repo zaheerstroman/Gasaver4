@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/nav_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/nav_orders"
+            android:title="My Orders" />
+
+        <item
+            android:id="@+id/nav_commission"
+            android:icon="@drawable/nav_commission"
+            android:title="My Commissions" />
+
+        <item
+            android:id="@+id/nav_my_earnings"
+            android:icon="@drawable/nav_commission"
+            android:title="My Earnings" />
+        <item
+            android:id="@+id/nav_passbook"
+            android:icon="@drawable/nav_passbook"
+            android:title="My Passbook" />
+        <item
+            android:id="@+id/nav_payment_request"
+            android:icon="@drawable/nav_paymentrequest"
+            android:title="Payment Request" />
+        <item
+            android:id="@+id/nav_offers"
+            android:icon="@drawable/nav_offers"
+            android:title="My Offers" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/nav_profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_creditcard"
+            android:icon="@drawable/nav_creditcard"
+            android:title="Gas Credit Card" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/nav_notifications"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_kycUpdate"
+            android:icon="@drawable/nav_kycupdate"
+            android:title="KYC Update" />
+        <item
+            android:id="@+id/nav_helpCenter"
+            android:icon="@drawable/nav_helpcenter"
+            android:title="Help Center" />
+        <item
+            android:id="@+id/nav_complaints"
+            android:icon="@drawable/dashboard_complaints"
+            android:title="Complaints" />
+        <item
+            android:id="@+id/nav_invite"
+            android:icon="@drawable/nav_invite"
+            android:title="Invite" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/nav_logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

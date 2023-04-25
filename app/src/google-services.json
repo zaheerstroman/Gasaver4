@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1055328443007",
+    "project_id": "gasserviceapp",
+    "storage_bucket": "gasserviceapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055328443007:android:e3786f5b8b7081dc70fd4a",
+        "android_client_info": {
+          "package_name": "com.e.gasserviceapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055328443007-75k2hjrp8cniovj1rhu05vti4cqc62up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.gasserviceapp",
+            "certificate_hash": "419e0fc6bccfe1bf87e5993c4b293e6085ea3597"
+          }
+        },
+        {
+          "client_id": "1055328443007-b9mb87gk555op7f8ef762jqdkqlr6jn8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE7yYMI-BoD9YVZ7MTjLze7Oi6sNhbMAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055328443007-b9mb87gk555op7f8ef762jqdkqlr6jn8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

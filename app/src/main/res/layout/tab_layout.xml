@@ -1,0 +1,28 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- Tab title -->
+    <TextView
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/tab_title"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@drawable/tab_item_selector"/>
+
+    <!-- Tab divider -->
+    <View
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout>

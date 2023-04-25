@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="preloaded_fonts" />
+
+    <string-array name="budgets">
+        <item> Selected </item>
+        <item> E10</item>
+        <item>Diesel</item>
+        <item>AdBlue</item>
+        <item>Unleaded</item>
+        <item>PremDSL</item>
+        <item>U95</item>
+        <item>TruckDSL</item>
+        <item>E85</item>
+        <item>U98</item>
+        <item>U91</item>
+        <item>P95</item>
+        <item>P98</item>
+        <item>PDL</item>
+        <item>B20</item>
+        <item>EV</item>
+        <item>DL</item>
+
+
+    </string-array>
+
+
+</resources>

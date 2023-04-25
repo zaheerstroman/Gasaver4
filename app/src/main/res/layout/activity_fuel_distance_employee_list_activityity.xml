@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.FuelDistanceEmployeeListFragment">
+
+        <LinearLayout
+            android:id="@+id/ll_form"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_white_background"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <!--            android:text="$5.00"-->
+            <TextView
+                android:id="@+id/tv_distance"
+                style="@style/TextView14spGrayPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/space20"
+                android:paddingRight="@dimen/space20"
+                android:text="Distance"
+                android:textColor="@color/Purple" />
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+            <!--            android:text="1"-->
+            <TextView
+                android:id="@+id/tv_price_L"
+                style="@style/TextView14spGrayPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/space20"
+                android:paddingRight="@dimen/space20"
+                android:text="Price"
+                android:textColor="@color/colorAccent" />
+            <!--            android:text="1234"-->
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                style="@style/TextView14spGrayPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/space20"
+                android:paddingRight="@dimen/space20"
+                android:text="KM+$"
+                android:textColor="@color/blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ll_form"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_employeelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

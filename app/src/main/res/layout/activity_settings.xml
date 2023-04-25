@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="Notification Allow Settings :"
+        android:textSize="16dp"
+        android:textStyle="normal"
+
+        />
+
+    <Switch
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_below="@+id/tv_title"
+        android:id="@+id/switch_push_noti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="56dp"
+        android:text="Push Notification:"
+        android:checked="true"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:layout_marginBottom="20dp"
+        android:textStyle="normal"
+        />
+
+    <Switch
+        android:layout_marginRight="@dimen/_10sdp"
+        android:id="@+id/switch_email_not"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_push_noti"
+        android:layout_alignLeft="@+id/switch_push_noti"
+        android:layout_marginBottom="20dp"
+        android:switchMinWidth="56dp"
+        android:text="Email Notification:"
+        android:textOff="OFF"
+        android:textOn="ON" />
+
+    <Switch
+        android:layout_marginRight="@dimen/_10sdp"
+        android:id="@+id/switch_sms_not"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:switchMinWidth="56dp"
+        android:layout_below="@+id/switch_email_not"
+        android:layout_alignLeft="@+id/switch_email_not"
+        android:text="SMS Notification:"
+        android:textOff="OFF"
+        android:textOn ="ON"
+        android:layout_marginBottom="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_sms_not"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/buttonshape_purpule_blue"
+        android:backgroundTint="@color/purple"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+
+
+        android:text="Save" />
+  </RelativeLayout>
+</layout>

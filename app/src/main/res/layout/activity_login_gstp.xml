@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/login_back"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:padding="16dp"
+    app:context=".activity.UserSignInActivity">
+
+<!--    <include layout="@layout/layout_toolbar"/>-->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/card_view1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="5dp">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/login_Text1"
+                android:layout_width="match_parent"
+                android:layout_height="91dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:src="@drawable/gas_saver_logo_rectangular_min"
+                android:text="Login"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/image"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/buttonshape_purpule_blue"
+                android:drawablePadding="8dp"
+                android:hint="Phone or Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+
+
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By submitting I accept Gasaver "
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_9sdp" />
+
+                <TextView
+                    android:id="@+id/tv_terms_cond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms and Conditions"
+                    android:textColor="@color/toolbar_color"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/login_Text2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:src="@drawable/gas_saver_logo_rectangular_min"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_purple"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--    android:id="@+id/fuil_Image"-->
+    <!--    <Button-->
+    <!--        android:id="@+id/login_fuil_Btn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_marginLeft="40dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginRight="40dp"-->
+    <!--        android:inputType="phone"-->
+    <!--        android:padding="15dp"-->
+    <!--        android:src="@drawable/login_btn"-->
+    <!--        android:text="Login"-->
+    <!--        android:textSize="16sp" />-->
+
+
+    <ImageView
+        android:id="@+id/btn_continue"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:padding="15dp"
+        android:src="@drawable/btn1"
+ />
+
+    <!--        <Button-->
+    <!--            android:id="@+id/fuil_Btn"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="50dp"-->
+    <!--            android:layout_marginLeft="40dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginRight="40dp"-->
+    <!--            android:inputType="phone"-->
+    <!--            android:padding="15dp"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:background="@color/white"-->
+    <!--            android:backgroundTint="@color/white"-->
+    <!--            android:src="@drawable/login_btn"-->
+    <!--            android:textSize="16sp" />-->
+
+
+    <TextView
+        android:id="@+id/or_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+<!--    android:text="Login with Social Media"-->
+    <TextView
+        android:id="@+id/login_with_social_media_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/liyo_Facebook"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:backgroundTint="@color/black"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/login_facebook"-->
+    <!--        android:layout_width="60dp"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:layout_marginRight="20dp"-->
+    <!--        android:inputType="phone"-->
+    <!--        android:padding="15dp"-->
+    <!--        android:src="@drawable/fb"-->
+    <!--        android:textSize="16sp" />-->
+
+
+    <!--        &lt;!&ndash;        <ImageView&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:id="@+id/login_facebook"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:background="@color/black"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:backgroundTint="@color/black"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintHorizontal_bias="0.023"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/btnSignup"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintVertical_bias="0.05"&ndash;&gt;-->
+
+    <!--        &lt;!&ndash;            app:srcCompat="@mipmap/facebook" />&ndash;&gt;-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/login_instagram"-->
+    <!--            android:layout_width="60dp"-->
+    <!--            android:layout_height="70dp"-->
+    <!--            android:layout_marginLeft="20dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginRight="20dp"-->
+    <!--            android:inputType="phone"-->
+    <!--            android:padding="15dp"-->
+    <!--            android:src="@drawable/in"-->
+    <!--            android:textSize="16sp" />-->
+
+
+    <!--        &lt;!&ndash;        <ImageView&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:id="@+id/login_instagram"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintHorizontal_bias="0.023"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/login_facebook"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintVertical_bias="0.021"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:srcCompat="@mipmap/google" />&ndash;&gt;-->
+
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/login_twitter"-->
+    <!--            android:layout_width="60dp"-->
+    <!--            android:layout_height="70dp"-->
+    <!--            android:layout_marginLeft="20dp"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginRight="20dp"-->
+    <!--            android:inputType="phone"-->
+    <!--            android:padding="15dp"-->
+    <!--            android:src="@drawable/tw"-->
+    <!--            android:textSize="16sp" />-->
+
+
+    <!--        &lt;!&ndash;        <ImageView&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:id="@+id/login_twitter"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_width="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginStart="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginTop="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginEnd="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            android:layout_marginBottom="8dp"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintHorizontal_bias="0.023"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/login_google"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:layout_constraintVertical_bias="0.031"&ndash;&gt;-->
+    <!--        &lt;!&ndash;            app:srcCompat="@mipmap/twitter" />&ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/liyo_Facebook2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/black"
+        android:orientation="horizontal">
+
+
+        <!--        <com.facebook.login.widget.LoginButton-->
+        <!--            android:id="@+id/b"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+
+        <!--            />-->
+
+        <!--        <com.google.android.gms.common.SignInButton-->
+        <!--            android:id="@+id/sign_in_button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@color/black"-->
+        <!--            android:backgroundTint="@color/com_facebook_messenger_blue" />-->
+
+    </LinearLayout>
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/card_view2"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="170dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_margin="5dp"-->
+    <!--        card_view:cardCornerRadius="5dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="70dp"-->
+    <!--                android:background="@color/black"-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_margin="5dp"-->
+    <!--                    android:text="YOU ARE NOT A MEMBER?"-->
+    <!--                    android:textAlignment="center"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="22dp" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:background="@color/black"-->
+    <!--                android:gravity="center"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <Button-->
+    <!--                    android:id="@+id/register"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_margin="5dp"-->
+    <!--                    android:background="@drawable/button_register"-->
+    <!--                    android:padding="8dp"-->
+    <!--                    android:text="REGISTER NOW"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="14dp" />-->
+    <!--            </LinearLayout>-->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
+
+</LinearLayout>

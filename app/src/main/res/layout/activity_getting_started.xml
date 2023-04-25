@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.GettingStarted"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <!--    android:background="@drawable/register_background_imge">-->
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/getting_started_back"
+                android:orientation="vertical">
+
+                <!--            <Spinner-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:padding="15dp"-->
+                <!--                android:id="@+id/register_type_spinner"-->
+                <!--                android:spinnerMode="dropdown"-->
+                <!--                android:layout_marginLeft="40dp"-->
+                <!--                android:layout_marginRight="40dp"-->
+                <!--                android:background="@drawable/spinner_border_background"-->
+                <!--                android:layout_marginTop="350dp">-->
+                <!--            </Spinner>-->
+
+                <TextView
+                    android:id="@+id/welcome_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="360dp"
+                    android:layout_marginRight="40dp"
+                    android:spinnerMode="dropdown"
+                    android:text="Welcome"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="30dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/ca_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="00dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:text="Create an account find compatible"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ca_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="00dp"
+                    android:layout_marginRight="40dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="Fuil Price"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                <!--            android:background="@drawable/edittext_background"-->
+                <ImageView
+                    android:id="@+id/fuil_Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:hint="mobileNo"
+                    android:inputType="phone"
+                    android:padding="15dp"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/getting_Started_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_blue"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:paddingStart="25dp"
+                    android:layout_marginTop="60dp"
+                    android:text="Getting Started" />
+
+<!--                android:padding="15dp"-->
+<!--                <TextView-->
+<!--                    android:id="@+id/login_1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="40dp"-->
+<!--                    android:layout_marginTop="20dp"-->
+<!--                    android:layout_marginRight="40dp"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="Already have a account? Log In"-->
+<!--                    android:textSize="16sp" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tvabtmission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:text="Already have a account? "
+                        android:textSize="15dp"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                         />
+
+<!--                    tvaboutourmission-->
+                    <TextView
+                        android:id="@+id/login_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/getting_Started_Button"
+                        android:text="Log in"
+                        android:textColor="@color/Purple"
+                        android:background="@color/white"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+    </LinearLayout>

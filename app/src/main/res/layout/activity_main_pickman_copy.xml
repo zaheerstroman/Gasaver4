@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainPickmanActivity">
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        >
+
+
+
+            <TextView
+                android:id="@+id/state_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="16dp"
+                android:text="State           "
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintEnd_toStartOf="@+id/state_div_tv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/state_div_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/state_txt"
+                app:layout_constraintStart_toEndOf="@+id/state_txt"
+                app:layout_constraintTop_toTopOf="@+id/state_txt" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/state_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/state_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/state_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/state_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/state_et1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="7dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:hint="Select"
+                        android:textSize="17sp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/right_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right_arrow_bg"
+                        android:src="@drawable/white_arrow"></ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/city_card_view1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/city_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/city_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/city_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/city_et1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="7dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:hint="Select"
+                        android:textSize="17sp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/city_right_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right_arrow_bg"
+                        android:src="@drawable/white_arrow"></ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/city_div_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/city_txt"
+                app:layout_constraintStart_toStartOf="@+id/state_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/city_txt" />
+
+            <TextView
+                android:id="@+id/city_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="City"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/state_txt"
+                app:layout_constraintTop_toBottomOf="@+id/state_card_view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/area_card_view1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/area_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/area_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/area_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/area_et1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="7dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:hint="Select"
+                        android:textSize="17sp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/area_right_arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right_arrow_bg"
+                        android:src="@drawable/white_arrow"></ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/area_div_tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/area_txt"
+                app:layout_constraintStart_toStartOf="@+id/city_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/area_txt" />
+
+            <TextView
+                android:id="@+id/area_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Area/Town"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/city_txt"
+                app:layout_constraintTop_toBottomOf="@+id/city_card_view" />
+
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Name          "
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/map_details_lyt" />
+
+            <TextView
+                android:id="@+id/name_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView21"
+                app:layout_constraintStart_toEndOf="@+id/textView21"
+                app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/name_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/name_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/name_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/name_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/name_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="17sp"></EditText>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/mobile_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Mobile"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/name_card_view" />
+
+            <TextView
+                android:id="@+id/mobile_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/mobile_txt"
+                app:layout_constraintStart_toStartOf="@+id/name_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/mobile_txt" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mobile_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/mobile_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/mobile_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/mobile_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/mobile_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="17sp"></EditText>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/state_card_view1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/state_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/state_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/state_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/state_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="7dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:hint="Select"
+                        android:textSize="17sp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right_arrow_bg"
+                        android:src="@drawable/white_arrow"></ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/state_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/state_txt"
+                app:layout_constraintStart_toStartOf="@+id/mobile_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/state_txt" />
+
+            <TextView
+                android:id="@+id/state_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="State     "
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/mobile_txt"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_card_view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/city_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/city_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/city_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/city_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/city_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="7dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:hint="Select"
+                        android:textSize="17sp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/city_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right_arrow_bg"
+                        android:src="@drawable/white_arrow"></ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/city_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/city_txt"
+                app:layout_constraintStart_toStartOf="@+id/state_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/city_txt" />
+
+            <TextView
+                android:id="@+id/city_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="City"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/state_txt"
+                app:layout_constraintTop_toBottomOf="@+id/state_card_view" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/area_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/area_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/area_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/area_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/area_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="7dp"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:hint="Select"
+                        android:textSize="17sp"></EditText>
+
+                    <ImageView
+                        android:id="@+id/area_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/right_arrow_bg"
+                        android:src="@drawable/white_arrow"></ImageView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/area_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/area_txt"
+                app:layout_constraintStart_toStartOf="@+id/city_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/area_txt" />
+
+            <TextView
+                android:id="@+id/area_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Area"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/city_txt"
+                app:layout_constraintTop_toBottomOf="@+id/city_card_view" />
+
+            <TextView
+                android:id="@+id/occupation_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Occupation"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/area_card_view" />
+
+            <TextView
+                android:id="@+id/occupation_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/occupation_txt"
+                app:layout_constraintStart_toEndOf="@+id/occupation_txt"
+                app:layout_constraintTop_toTopOf="@+id/occupation_txt" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/occupation_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/occupation_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/occupation_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/occupation_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/occupation_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="17sp"></EditText>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/size_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Size"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/occupation_card_view" />
+
+            <TextView
+                android:id="@+id/size_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/size_txt"
+                app:layout_constraintStart_toStartOf="@+id/occupation_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/size_txt" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/size_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/size_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/size_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/size_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/size_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textSize="17sp"></EditText>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Please Mention Data Type MB/GB/TB"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/size_card_view"
+                app:layout_constraintTop_toBottomOf="@+id/size_card_view"></TextView>
+
+
+            <TextView
+                android:id="@+id/description_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="32dp"
+                android:text="Description"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toTopOf="@+id/btn1"
+                app:layout_constraintStart_toStartOf="@+id/textView21"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+            <TextView
+                android:id="@+id/description_div_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/description_txt"
+                app:layout_constraintStart_toStartOf="@+id/occupation_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/description_txt" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/description_card_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorLightBlue"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="@+id/description_div_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/description_div_tv"
+                app:layout_constraintTop_toTopOf="@+id/description_div_tv">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightBlue">
+
+                    <EditText
+                        android:id="@+id/description_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@null"
+                        android:maxLines="3"
+                        android:textSize="17sp"></EditText>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="32dp"
+                android:text="button"
+                app:layout_constraintBottom_toBottomOf="parent"></Button>
+
+
+            <!--    <Button-->
+            <!--        android:id="@+id/search_btn"-->
+            <!--        android:layout_width="0dp"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:layout_marginStart="24dp"-->
+            <!--        android:layout_marginTop="32dp"-->
+            <!--        android:layout_marginEnd="24dp"-->
+            <!--        android:background="@drawable/search_btn_bg"-->
+            <!--        android:text="Search"-->
+            <!--        android:textColor="@color/colorWhite"-->
+            <!--        app:layout_constraintEnd_toEndOf="@+id/area_card_view"-->
+            <!--        app:layout_constraintStart_toStartOf="@+id/area_txt"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/area_card_view" />-->
+
+            <!--    <androidx.recyclerview.widget.RecyclerView-->
+            <!--        android:id="@+id/studios_rec_view"-->
+            <!--        android:layout_width="0dp"-->
+            <!--        android:layout_height="0dp"-->
+            <!--        android:paddingStart="16dp"-->
+            <!--        android:paddingEnd="16dp"-->
+            <!--        android:background="@color/colorLightBlue"-->
+            <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintHorizontal_bias="0.0"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        app:layout_constraintTop_toBottomOf="@+id/search_btn"-->
+            <!--        app:layout_constraintVertical_bias="0.0"-->
+            <!--        android:paddingBottom="100dp"-->
+            <!--        android:clipToPadding="false"/>-->
+
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

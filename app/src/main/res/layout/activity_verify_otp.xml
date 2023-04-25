@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activity.OtpActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/left_arrow" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+        <!--        android:background="@drawable/otp_text_bg_red"-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo2_bold"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:text="ENTER OTP"
+            android:textColor="@color/purple"
+            android:textSize="26dp"
+
+
+            />
+
+        <!--        android:paddingTop="@dimen/_3sdp"-->
+        <!--        android:text="An 4 digit Code has been sent to \n+91-9032757020"-->
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/exo2_bold"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:text="An 4 digit Code has been sent to \n"
+            android:textColor="@color/black"
+
+            android:textSize="12dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/tv_resend_otp_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:text="00:45"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <com.gasaver.customviews.Pinview
+            android:id="@+id/tv_pin_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:importantForAutofill="noExcludeDescendants"
+            android:outlineAmbientShadowColor="@color/Purple"
+            android:outlineSpotShadowColor="@color/Purple"
+            android:paddingRight="@dimen/_6sdp"
+            app:inputType="number"
+            app:pinLength="4"
+
+            />
+
+
+        <!--        <com.tproperty.customviews.Pinview-->
+        <!--            android:gravity="start"-->
+        <!--            android:layout_gravity="start"-->
+        <!--            android:focusable="true"-->
+        <!--            android:importantForAutofill="noExcludeDescendants"-->
+        <!--            android:id="@+id/tv_pin_otp"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="@dimen/_40sdp"-->
+        <!--            app:inputType="number"-->
+        <!--            app:pinLength="4"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal">
+
+        <!--    android:layout_marginLeft="@dimen/_20sdp"-->
+        <TextView
+            android:id="@+id/tv_resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Don't receive the code?"
+            android:textColor="@color/black"
+
+            android:textSize="@dimen/_10sdp"
+
+            />
+
+        <TextView
+            android:id="@+id/login_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/getting_Started_Button"
+            android:background="@color/white"
+            android:text=" Resend"
+            android:textColor="@color/Purple"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="00sp"
+            android:background="@drawable/buttonshape_purpule_blue"
+            android:backgroundTint="@color/Purple"
+            android:paddingLeft="@dimen/_40sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Continue"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+
+
+            android:textSize="@dimen/_12sdp"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_otp_resend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_weight="1"
+            android:background="@color/purple"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="resend"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

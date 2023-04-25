@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".activity.MainPickmanActivity">
+
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Budget Petrol Chippendale"
+        android:textColor="@color/colorBlack"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+
+        />
+
+
+    <!--    chippendale_txt-->
+
+
+    <RelativeLayout
+        android:id="@+id/activity_sign_up_love_pickman"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView22"
+        tools:context=".activity.MainPickmanActivity">
+
+
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/submit_Btn"
+            android:layout_margin="10dp"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal" />
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/l1"
+            android:background="@color/Blue"></View>
+
+
+        <TextView
+            android:id="@+id/t1234_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:layout_marginTop="@dimen/space15"
+            android:text="'1234 will save as 123.4 Sing in for a Chance to win $ 25 Gift Card!'"
+            android:textAllCaps="true"
+            android:textColor="@color/textGray"
+
+            android:textSize="14sp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/activity_sign_up_love_pickman1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_margin="10dp"
+            android:background="@color/Purple"
+            android:layout_below="@+id/activity_sign_up_love_pickman"
+            android:orientation="horizontal" />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_sign_up_love_pickman2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_sign_up_love_pickman1"
+        tools:context=".activity.MainPickmanActivity"
+
+
+        >
+
+
+
+        <Button
+            android:id="@+id/submit_Btn"
+            style="@style/ButtonOrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chippendale1_text"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Submit"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/state_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:text="E10           "
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toStartOf="@+id/state_div_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            app:layout_constraintStart_toEndOf="@+id/chippendale1_text"
+
+
+
+            />
+
+        <TextView
+            android:id="@+id/state_div_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="€"
+
+            android:textColor="@color/Purple"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/state_txt"
+            app:layout_constraintStart_toEndOf="@+id/state_txt"
+            app:layout_constraintTop_toTopOf="@+id/state_txt" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/state_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/state_div_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/state_div_tv"
+            app:layout_constraintTop_toTopOf="@+id/state_div_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/state_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/city_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/city_div_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/city_div_tv"
+            app:layout_constraintTop_toTopOf="@+id/city_div_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/city_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/city_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/city_div_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/city_txt"
+            app:layout_constraintStart_toStartOf="@+id/state_div_tv"
+            app:layout_constraintTop_toTopOf="@+id/city_txt" />
+
+        <TextView
+            android:id="@+id/city_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Unleaded"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/state_txt"
+            app:layout_constraintTop_toBottomOf="@+id/state_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/area_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/area_div_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/area_div_tv"
+            app:layout_constraintTop_toTopOf="@+id/area_div_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/area_div_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/area_txt"
+            app:layout_constraintStart_toStartOf="@+id/city_div_tv"
+            app:layout_constraintTop_toTopOf="@+id/area_txt" />
+
+        <TextView
+            android:id="@+id/area_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Diesel"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/city_txt"
+            app:layout_constraintTop_toBottomOf="@+id/city_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pound_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/pound_Sterling_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pound_Sterling_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/pound_Sterling_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_pound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_pound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/pound_Sterling_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="£"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/prem_DSL_txt"
+            app:layout_constraintStart_toStartOf="@+id/area_div_tv"
+            app:layout_constraintTop_toTopOf="@+id/prem_DSL_txt" />
+
+        <TextView
+            android:id="@+id/prem_DSL_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Prem DSL"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/area_txt"
+            app:layout_constraintTop_toBottomOf="@+id/area_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cuba_Peso_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cuba_Peso_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cuba_Peso_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/cuba_Peso_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_cuba_Peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_cuba_Peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/cuba_Peso_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/U95_txt"
+            app:layout_constraintStart_toStartOf="@+id/pound_Sterling_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/U95_txt" />
+
+        <TextView
+            android:id="@+id/U95_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="U95"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/prem_DSL_txt"
+            app:layout_constraintTop_toBottomOf="@+id/pound_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/brazil_Real_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/brazil_Real_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/brazil_Real_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/brazil_Real_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_Brazil_Real"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_Brazil_Real"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/brazil_Real_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/U98_txt"
+            app:layout_constraintStart_toStartOf="@+id/cuba_Peso_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/U98_txt" />
+
+        <TextView
+            android:id="@+id/U98_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="U98"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/U95_txt"
+            app:layout_constraintTop_toBottomOf="@+id/cuba_Peso_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/lpg_Aruba_Guilder_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/lpg_Aruba_Guilder_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/lpg_Aruba_Guilder_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/lpg_Aruba_Guilder_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_lpg_Aruba_Guilder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_lpg_Aruba_Guilder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/lpg_Aruba_Guilder_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ƒ"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/LPG_txt"
+            app:layout_constraintStart_toStartOf="@+id/brazil_Real_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/LPG_txt" />
+
+        <TextView
+            android:id="@+id/LPG_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="LPG"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/U98_txt"
+            app:layout_constraintTop_toBottomOf="@+id/brazil_Real_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/truck_DSL_Azerbaijan_Manat_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/truck_DSL_Azerbaijan_Manat_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/truck_DSL_Azerbaijan_Manat_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/truck_DSL_Azerbaijan_Manat_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_truck_DSL_Azerbaijan_Manat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_truck_DSL_Azerbaijan_Manat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/truck_DSL_Azerbaijan_Manat_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₼"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/truck_DSL_txt"
+            app:layout_constraintStart_toStartOf="@+id/lpg_Aruba_Guilder_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/truck_DSL_txt" />
+
+        <TextView
+            android:id="@+id/truck_DSL_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Truck DSL"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/LPG_txt"
+            app:layout_constraintTop_toBottomOf="@+id/lpg_Aruba_Guilder_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/adBlue_China_Yuan_Renminbi_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/adBlue_China_Yuan_Renminbi_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/adBlue_China_Yuan_Renminbi_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/adBlue_China_Yuan_Renminbi_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_adBlue_China_Yuan_Renminbi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_adBlue_China_Yuan_Renminbi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/adBlue_China_Yuan_Renminbi_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/AdBlue_txt"
+            app:layout_constraintStart_toStartOf="@+id/truck_DSL_Azerbaijan_Manat_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/AdBlue_txt" />
+
+        <TextView
+            android:id="@+id/AdBlue_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="AdBlue"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/truck_DSL_txt"
+            app:layout_constraintTop_toBottomOf="@+id/truck_DSL_Azerbaijan_Manat_card_view" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/e85_Costa_Rica_Colon_card_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/colorLightBlue"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/e85_Costa_Rica_Colon_Symbol_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/e85_Costa_Rica_Colon_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/e85_Costa_Rica_Colon_Symbol_tv">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightBlue">
+
+                <EditText
+                    android:id="@+id/area_et_e85_Costa_Rica_Colon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:hint="Select"
+                    android:textSize="17sp">
+
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/area_right_arrow_e85_Costa_Rica_Colon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/right_arrow_bg"
+                    android:src="@drawable/white_arrow"></ImageView>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/e85_Costa_Rica_Colon_Symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₡"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/e85_txt"
+            app:layout_constraintStart_toStartOf="@+id/adBlue_China_Yuan_Renminbi_Symbol_tv"
+            app:layout_constraintTop_toTopOf="@+id/e85_txt" />
+
+        <TextView
+            android:id="@+id/e85_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="E85"
+            android:textColor="@color/colorBlack"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/AdBlue_txt"
+            app:layout_constraintTop_toBottomOf="@+id/adBlue_China_Yuan_Renminbi_card_view" />
+
+        <!-- e85_Costa_Rica_Colon   ₡-->
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/search_btn_bg"
+            android:text="Search"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="@+id/e85_Costa_Rica_Colon_card_view"
+            app:layout_constraintStart_toStartOf="@+id/e85_txt"
+            app:layout_constraintTop_toBottomOf="@+id/e85_Costa_Rica_Colon_card_view" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

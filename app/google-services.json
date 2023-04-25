@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "718642613953",
+    "firebase_url": "https://gasaver-153a5-default-rtdb.firebaseio.com",
+    "project_id": "gasaver-153a5",
+    "storage_bucket": "gasaver-153a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718642613953:android:77d79304b527c20170ce40",
+        "android_client_info": {
+          "package_name": "com.gasaver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718642613953-2sr3l4grr6o56ec8gkq7bcuqbp9vtiet.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gasaver",
+            "certificate_hash": "419e0fc6bccfe1bf87e5993c4b293e6085ea3597"
+          }
+        },
+        {
+          "client_id": "718642613953-jjtgbso8m9oekaf0qloau70i60pe12se.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGmsAjFCO-ZwDZQI8SqFEKNUaS3DtyXTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718642613953-jjtgbso8m9oekaf0qloau70i60pe12se.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,304 @@
+<resources>
+    <string name="app_name">Gasaver</string>
+
+    <string name="network_not_connected">There is no network connection.Please try again.</string>
+    <string name="failed_request">Please try again...</string>
+    <string name="is_invalid"> is invalid</string>
+
+    <string name="btn_send_token">Send Token</string>
+    <string name="btn_send_tokens">Send Tokens</string>
+    <string name="btn_send_topic">Send Topic</string>
+    <string name="btn_show_token">Show Token</string>
+    <string name="btn_subscribe_news">Subscribe (News)</string>
+    <string name="btn_unsubscribe_news">Unsubscribe (News)</string>
+    <string name="notification_channel_id">default</string>
+    <string name="result">Something will happen here&#8230;</string>
+    <string name="subscribed">Subscribed to news topic</string>
+    <string name="unsubscribed">Unsubscribed from news topic</string>
+
+
+    <string name="msg_token_fmt"> c5pBXXsuCN0:APA91bH8nLMt084KpzMrmSWRS2SnKZudyNjtFVxLRG7VFEFk_RgOm-Q5EQr_oOcLbVcCjFH6vIXIyWhST1jdhR8WMatujccY5uy1TE0hkppW_TSnSBiUsH_tRReutEgsmIMmq8fexTmL </string>
+
+
+    <string name="title_activity_home_maps">Map</string>
+    <string name="style_json">[
+  {
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#ebe3cd\"
+      }
+    ]
+  },
+  {
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#523735\"
+      }
+    ]
+  },
+  {
+    \"elementType\": \"labels.text.stroke\",
+    \"stylers\": [
+      {
+        \"color\": \"#f5f1e6\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"administrative\",
+    \"elementType\": \"geometry.stroke\",
+    \"stylers\": [
+      {
+        \"color\": \"#c9b2a6\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"administrative.land_parcel\",
+    \"elementType\": \"geometry.stroke\",
+    \"stylers\": [
+      {
+        \"color\": \"#dcd2be\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"administrative.land_parcel\",
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#ae9e90\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"landscape.natural\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#dfd2ae\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"poi\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#dfd2ae\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"poi\",
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#93817c\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"poi.park\",
+    \"elementType\": \"geometry.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#a5b076\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"poi.park\",
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#447530\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#f5f1e6\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road.arterial\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#fdfcf8\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road.highway\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#f8c967\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road.highway\",
+    \"elementType\": \"geometry.stroke\",
+    \"stylers\": [
+      {
+        \"color\": \"#e9bc62\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road.highway.controlled_access\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#e98d58\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road.highway.controlled_access\",
+    \"elementType\": \"geometry.stroke\",
+    \"stylers\": [
+      {
+        \"color\": \"#db8555\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"road.local\",
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#806b63\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"transit.line\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#dfd2ae\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"transit.line\",
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#8f7d77\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"transit.line\",
+    \"elementType\": \"labels.text.stroke\",
+    \"stylers\": [
+      {
+        \"color\": \"#ebe3cd\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"transit.station\",
+    \"elementType\": \"geometry\",
+    \"stylers\": [
+      {
+        \"color\": \"#dfd2ae\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"water\",
+    \"elementType\": \"geometry.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#b9d3c2\"
+      }
+    ]
+  },
+  {
+    \"featureType\": \"water\",
+    \"elementType\": \"labels.text.fill\",
+    \"stylers\": [
+      {
+        \"color\": \"#92998d\"
+      }
+    ]
+  }
+]</string>
+    <string name="title_activity_select_driver">SelectDriver</string>
+
+    <string name="API_KEY">AIzaSyA1B-lkYW4V5rR8PP3Zr9gUbBWZoR3hOkg</string>
+
+
+    <string name="login_string">Already have an account? <b>Login here</b></string>
+
+    <string name="open_navigation_drawer">Open Drawer</string>
+    <string name="close_navigation_drawer">Open Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="facebook_app_id">688503272769502</string>
+    <string name="fb_login_protocol_scheme">fb688503272769502</string>
+    <string name="facebook_client_token">332564cf316a9d9f5c0ebdc957c6322b</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">DONE</string>
+
+    <string name="Name">Name</string>
+    <string name="welcome_name">Welcome to Fuel \naccessories</string>
+    <string name="customer_care">Customer Care</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="electricity">Electricity</string>
+    <string name="consumer_number">Consumer Number</string>
+
+    <string name="enter_amount">Enter Amount</string>
+    <string name="minimum_amount">Minimum Amount should be 10</string>
+    <string name="refund_amount">Refund\nAmount</string>
+    <string name="confirm_amount">Confirm Amount</string>
+    <string name="amount">Amount</string>
+    <string name="proceed">Proceed</string>
+    <string name="paymentbtn">Payment</string>
+
+    <string name="records">No Records Found</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string name="trouble_logIn">Trouble Logging in ?</string>
+
+    <string name="terms">By Logging in you Agree to our Terms
+        and Conditions and Privacy Policy.</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_bottom_navigation_layout">BottomNavigationLayoutActivity</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_login_gas">LoginActivityGas</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="maps_key" translatable="false">AIzaSyBE7yYMI-BoD9YVZ7MTjLze7Oi6sNhbMAw</string>
+
+</resources>

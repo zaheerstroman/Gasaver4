@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_sky_blue_icons"
+        android:enabled="true"
+
+        />
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="List"
+        android:icon="@drawable/menu"
+
+        app:backgroundTint="#55000000"
+        android:background="#55000000"
+        />
+
+<!--    android:iconTint="@color/toolbar_color"-->
+
+    <item
+        android:id="@+id/nav_search"
+        android:icon="@drawable/promotion_shopping_online64_1"
+        android:title="Promo"
+
+
+        />
+
+
+    <item
+        android:id="@+id/about"
+        android:title="Wish list"
+        android:icon="@drawable/heart"
+
+        app:backgroundTint="#55000000"
+        android:background="#55000000"
+        />
+
+
+    <item
+        android:id="@+id/profile"
+        android:title="My account"
+        android:icon="@drawable/profile"
+
+        app:backgroundTint="#55000000"
+        android:background="#55000000"
+        />
+
+</menu>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_station"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    android:background="@drawable/buttonshape_purpule_less"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="08dp"
+        android:background="@drawable/buttonshape_purpule_less"
+        >
+
+        <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end"
+        android:src="@drawable/close_blue_icon" />
+
+        <TextView
+            android:id="@+id/txtLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/Purple"
+            android:textSize="14dp"
+            android:textStyle="bold"
+
+            android:gravity="center"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/distanceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtLocationName"
+            android:layout_marginTop="05dp"
+            android:orientation="horizontal"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/txtLocationDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="2.5 KM"
+                android:textColor="@color/toolbar_color"
+                android:textStyle="bold"
+
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/estimatedTimeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/distanceLayout"
+            android:layout_marginTop="05dp"
+            android:orientation="horizontal"
+
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+<!--            android:text="Estimated Time : "-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Est Time : "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                />
+
+            <TextView
+                android:id="@+id/txtLocationTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="5 sec"
+                android:textColor="@color/toolbar_color"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                />
+
+
+        </LinearLayout>
+
+<!--        android:orientation="horizontal"-->
+        <LinearLayout
+            android:id="@+id/priceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/estimatedTimeLayout"
+            android:layout_marginTop="00dp"
+            android:orientation="vertical"
+            >
+
+<!--            android:text="Price : "-->
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/txtPrices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+<!--            android:textColor="@color/toolbar_color"-->
+            <TextView
+                android:id="@+id/txtPriceLocationDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:text="10.00"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPriceLocationDistance2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:text="10.00"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtPriceLocationDistance3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:text="10.00"
+                android:textColor="@color/red"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/brandLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/priceLayout"
+            android:layout_marginTop="05dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+<!--            android:id="@+id/txtBrand"-->
+<!--            android:id="@+id/brand"-->
+            <TextView
+                android:id="@+id/txtBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand : "
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+<!--            android:text="Ampol"-->
+            <TextView
+                android:id="@+id/txtBrandLocationDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="E10"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/toolbar_color"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

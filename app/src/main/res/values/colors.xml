@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black1">#CC000000</color>
+    <color name="white2">#F4F4F4</color>
+    <color name="white1">#B8EDEBEB</color>
+    <color name="red1">#CCD14141</color>
+    <color name="text_grey_thick">#555454</color>
+    <color name="rb_select">#787878</color>
+    <color name="rb_unselect">#A2A4A7</color>
+    <color name="light_grey">#D5D6D7</color>
+
+    <color name="toolbar_color">#00345E</color>
+    <color name="profile_bg_color">#eceded</color>
+    <color name="tab_bg_color">#C3C8C8</color>
+    <color name="proj_desc_color">#3F51B5</color>
+
+
+    <color name="colorGrey">#B9BBBD</color>
+    <color name="colorLightBlue">#EBEFF3</color>
+    <color name="colorLightGrey">#B7C5D2</color>
+    <color name="colorShopFirst">#F0515A</color>
+    <color name="colorShopSecond">#FFCD69</color>
+    <color name="colorYellow">#F6DE23</color>
+    <color name="colorLightBg">#F8F8FA</color>
+
+    <color name="purple">#7745A9</color>
+    <color name="orangelight">#FF6250</color>
+    <color name="whiteblue">#F1F5F6</color>
+    <color name="dot_inactive">#E1E7EB</color>
+    <color name="dot_active">#A1ABB2</color>
+    <color name="textGray">#8B999F</color>
+    <color name="separator">#D0D4D9</color>
+
+    <color name="whitegrey">#F9F9F9</color>
+
+
+    <color name="quantum_googred900">#a52714</color>
+
+
+    <color name="primaryColor">#A32CC4</color>
+    <color name="primaryDarkColor">#A32CC4</color>
+    <color name="accentColor">#A32CC4</color>
+
+    <color name="textColor">#FFFFFF</color>
+    <color name="itemTextColor">#707070</color>
+    <color name="transparentColor">#00FFFFFF</color>
+
+    <color name="colorfirsttext">#000000</color>
+    <color name="colorsecondtext">#777474</color>
+    <color name="colorview">#A5A2A2</color>
+
+    <color name="roundedbackgroundyellow">#FFD811</color>
+
+    <color name="Blue">#2b2168</color>
+    <color name="Purple">#A32CC4</color>
+
+
+    <color name="light_blue">#3700B3</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+
+    <color name="lightblue2">#F4F7FC</color>
+    <color name="light_blue1">#ebefff</color>
+
+    <color name="bg01">#d9e3ff</color>
+    <color name="bg02">#ebefff</color>
+
+    <color name="red">#EE4036</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <color name="transparent">#80FFFFFF</color>
+    <color name="transparent_thick">#55000000</color>
+
+
+    <color name="colorAccent">#FF4081</color>
+    <color name="title_background">#ff222222</color>
+
+    <color name="projectblue">#21abf6</color>
+    <color name="green">#4CAF50</color>
+    <color name="orange">#F96A1B</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#8D6E63</color>
+    <color name="dot_light_screen2">#8D6E63</color>
+    <color name="dot_light_screen3">#8D6E63</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#6D4C41</color>
+    <color name="dot_dark_screen2">#6D4C41</color>
+    <color name="dot_dark_screen3">#6D4C41</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+    <color name="colorBlack">#000</color>
+
+    <color name="grey">#d3d3d3</color>
+    <color name="dark_grey">#A9A9A9</color>
+
+    <color name="lightGrey">#F4F4F4</color>
+
+    <color name="purple_500">#87CEEB</color>
+
+    <color name="blue_selector">#00aeea</color>
+    <color name="red_negative_progress">#ff3333</color>
+
+    <color name="background">#E0E0E0</color>
+
+    <color name="colorPrimary33">#6200EE</color>
+    <color name="colorPrimaryDark33">#3700B3</color>
+    <color name="colorAccent33">#03DAC5</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="teal_500">#04BAA8</color>
+
+    <color name="textOnDark">#FFFFFF</color>
+    <color name="setupButton">#D94441</color>
+
+    <color name="dark_yellow">#FFC107</color>
+
+    <color name="teal_7001">#FF018786</color>
+
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="textColorSecondary">#727272</color>
+    <color name="white5">#ffffff</color>
+    <color name="window_background">#FFF5F5F5</color>
+    <color name="selectable_pressed">#99BDBDBD</color>
+
+    <color name="cream">#FFFDD0</color>
+    <color name="blue">#33B5E5</color>
+    <color name="pink">#F50057</color>
+    <color name="cyan">#00BCD4</color>
+    <color name="dark">#5B676A</color>
+    <color name="yellow">#FFEB3B</color>
+
+
+    <color name="colorPrimaryDark2">#000000</color>
+    <color name="colorPrimary2">#191919</color>
+    <color name="colorAccent2">#03DAC5</color>
+
+
+    <color name="colorCream">#f7f7f7</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGrapeFruit">#ED5565</color>
+    <color name="colorGrapeFruitDark">#DA4453</color>
+    <color name="colorBitterSweet">#FC6E51</color>
+    <color name="colorBitterSweetDark">#E9573F</color>
+    <color name="colorFlower">#FFCE54</color>
+    <color name="colorFlowerDark">#F68B42</color>
+    <color name="colorGrass">#A0D468</color>
+    <color name="colorGrassDark">#8CC152</color>
+    <color name="colorBlueJeans">#509CEC</color>
+    <color name="colorBlueJeansDark">#4A89DC</color>
+    <color name="colorLavander">#AC92EC</color>
+    <color name="colorLavanderDark">#967ADC</color>
+    <color name="colorMint">#48CFAD</color>
+    <color name="colorMintDark">#37BC9B</color>
+    <color name="colorAqua">#4FC1E9</color>
+    <color name="colorAquaDark">#3BAFDA</color>
+    <color name="colorPinkRose">#EC87C0</color>
+    <color name="colorPinkRoseDark">#D770AD</color>
+
+    <color name="colorPrimary1">#3F51B5</color>
+    <color name="colorPrimaryDark1">#303F9F</color>
+    <color name="colorAccent1">#FF4081</color>
+
+    <color name="ProjectBlack">#191919</color>
+
+    <color name="projectdarkblue">#28166f</color>
+
+    <color name="color1">#004562</color>
+    <color name="color2">#29b984</color>
+    <color name="color3">#F3BB72</color>
+    <color name="color4">#f79278</color>
+    <color name="color5">#003366</color>
+
+
+    <color name="window_back">#E6E6E6</color>
+    <color name="windowBack">#E0E0E0</color>
+    <color name="colorWhite1">#FFFFFF</color>
+    <color name="colorInput">#474747</color>
+
+    <color name="register_back">#E6E6E6</color>
+    <color name="login_button">#66b6b7</color>
+    <color name="hint_color">#C8C8C8</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="input_color">#474747</color>
+
+    <color name="lightgray">#ededed</color>
+
+    <color name="foreground1">#ff355689</color>
+    <color name="titletextcolor">#FFFF00</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#795548</color>
+    <color name="bg_screen2">#795548</color>
+    <color name="bg_screen3">#795548</color>
+
+
+
+    <color name="redAccent">#FF1A4B</color>
+    <color name="redAccentOpacity10">#1AFF1A4B</color>
+
+    <color name="blackOpacity50">#80121212</color>
+
+    <color name="blueGrayDark">#263238</color>
+
+    <color name="gray">#303C5A</color>
+
+
+    <!--FoodMeals-->
+
+    <color name="colorWhiteDark">#DBDBDB</color>
+    <color name="colorPrimaryLight">#CA7474</color>
+    <color name="colorBackground">#F4F7F7</color>
+
+    <color name="colorOrange">#eb8323</color>
+    <color name="colorBlue">#0671a8</color>
+    <color name="DropDownColor">#e6e7e8</color>
+    <color name="colorTextGray">#a7a9ac</color>
+    <color name="colorFacebookColor">#1d4d99</color>
+    <color name="colorGoogleColor">#317aed</color>
+    <color name="colorFaqSMSGray">#f1f2f2</color>
+    <color name="colorLoanOffersGray">#efefef</color>
+    <color name="colorTotalInterest">#a7a9ac</color>
+    <color name="colorDarkOrange">#DB7505</color>
+
+    <!--Custom-Calender-View-master-->
+    <color name="bg_color">#e3ebee</color>
+    <color name="off_white">#f1f5f7</color>
+    <color name="color_grey">#2a2d30</color>
+
+
+    <color name="app_blue">#217398</color>
+    <color name="app_black">#2A2A2A</color>
+    <color name="app_black_click">#3f3f3f</color>
+
+
+</resources>
