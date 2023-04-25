@@ -839,6 +839,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                 try {
 
 
+
                     CommonUtils.hideLoading();
                     stationDataList = response.body().getData();
 
