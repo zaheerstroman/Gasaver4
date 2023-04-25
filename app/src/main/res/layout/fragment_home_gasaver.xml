@@ -47,7 +47,7 @@
             android:id="@+id/spinner_caseText1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_weight="1.1"
+            android:layout_weight="1"
             android:adjustViewBounds="true"
             android:background="@drawable/spinner_border_background"
             app:tint="@color/primaryColor"
@@ -67,23 +67,19 @@
         <com.skydoves.powerspinner.PowerSpinnerView
             android:id="@+id/spinner_subcat"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_weight="1.1"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:gravity="center"
             android:layout_marginStart="@dimen/_10sdp"
             android:padding="10dp"
             app:spinner_popup_max_height="@dimen/_200sdp"
             android:textColor="@color/black"
+            android:background="#99FFFFFF"
+            app:spinner_arrow_tint="@color/Purple"
             android:textSize="10sp"
-            android:hint="Selected"
+            android:hint="Select"
             app:fontFamily="@font/quicksand_semibold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner_caseText1"
-
-            android:dropDownHeight="50dp"
-            >
-
-        </com.skydoves.powerspinner.PowerSpinnerView>
+            />
 <!--        android:scrollbarSize="@dimen/_2sdp"-->
 
 <!--        <com.skydoves.powerspinner.PowerSpinnerView-->
