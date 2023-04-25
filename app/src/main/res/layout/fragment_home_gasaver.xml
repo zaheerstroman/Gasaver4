@@ -67,14 +67,11 @@
         <com.skydoves.powerspinner.PowerSpinnerView
             android:id="@+id/spinner_subcat"
             android:layout_width="match_parent"
-            android:background="@drawable/spinner_border_background"
-
             android:layout_height="50dp"
             android:layout_weight="1.1"
             android:gravity="center"
             android:layout_marginStart="@dimen/_10sdp"
             android:padding="10dp"
-            android:popupBackground="#BFFFFFFF"
             app:spinner_popup_max_height="@dimen/_200sdp"
             android:textColor="@color/black"
             android:textSize="10sp"
