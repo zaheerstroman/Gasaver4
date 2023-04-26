@@ -562,6 +562,24 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         return binding.getRoot();
     }
 
+//    onCreate/onCreateView
+//    or
+//    onViewCreated()
+
+
+    //    onViewStateRestored
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        super.onViewStateRestored(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+
+
     private void performSearch() {
         AutoCompleteTextView searchEditText = (AutoCompleteTextView) binding.getRoot().findViewById(R.id.edit_search);
         String searchString = searchEditText.getText().toString();
@@ -1434,6 +1452,13 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
         if (fusedLocationProviderClient != null) stopLocationUpdate();
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+
 
     @Override
     public void onResume() {
