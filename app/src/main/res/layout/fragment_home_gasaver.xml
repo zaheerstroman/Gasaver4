@@ -79,7 +79,6 @@
             app:spinner_popup_max_height="@dimen/_200sdp"
             android:textColor="@color/black"
             app:spinner_arrow_tint="@color/Purple"
-            android:textSize="10sp"
             android:hint="Select"
             app:fontFamily="@font/quicksand_semibold"
             android:background="@drawable/spinner_border_background1"
@@ -102,6 +101,8 @@
             app:tint="@color/primaryColor"
             app:drawableTint="@color/primaryColor"
             android:popupBackground="#BEFFFFFF"
+            android:spinnerMode="dropdown"
+            android:textSize="12sp"
 
 
             />
