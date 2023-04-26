@@ -300,6 +300,12 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
     private static final int NOTIFICATION_ID = 1;
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
