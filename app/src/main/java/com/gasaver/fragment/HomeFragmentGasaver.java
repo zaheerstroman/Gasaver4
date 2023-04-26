@@ -200,6 +200,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
     //    Spinner spinner_budget;
     Spinner spinner_subcat;
 
+    String catid = "1";
+
     private String[] budgetArrayList = {"", "E10", "Diesel", "AdBlue", "Unleaded", "PremDSL", "U95", "TruckDSL", "E85", "U98", "U91", "P95", "P98", "PDL", "B20", "EV", "DL"};
 
 
@@ -298,12 +300,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
     public static HomeFragmentGasaver context1;
 
     private static final int NOTIFICATION_ID = 1;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -558,27 +554,15 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
             }
         });
+        binding.placesGroup.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
+            @Override
+            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
+                binding.spinnerSubcat.selectItemByIndex(binding.placesGroup.getCheckedChipId()+1);
+            }
+        });
 
         return binding.getRoot();
     }
-
-//    onCreate/onCreateView
-//    or
-//    onViewCreated()
-
-
-    //    onViewStateRestored
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-
 
     private void performSearch() {
         AutoCompleteTextView searchEditText = (AutoCompleteTextView) binding.getRoot().findViewById(R.id.edit_search);
@@ -675,7 +659,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     binding.spinnerCaseText1.setAdapter(adapter);
                     binding.spinnerCaseText1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//                    binding.spinnerSubcat.setAdapter(adapter);
+                        //                    binding.spinnerSubcat.setAdapter(adapter);
 //                    binding.spinnerSubcat.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -764,6 +748,38 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
                     binding.spinnerSubcat.setItems(spinnerItems);
 
+                    binding.spinnerSubcat.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
+                        @Override public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
+                            binding.spinnerSubcat.getSelectedIndex();
+                            if (!newItem.equals("Select"))
+                            {
+                                catid = response.body().getData().get(binding.spinnerSubcat.getSelectedIndex()-1).getId();
+                                getStationsData();
+                            }
+                            else
+                            {
+                                getStationsData();
+                            }
+                        }
+                    });
+                    binding.placesGroup.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
+                        @Override
+                        public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
+                            binding.spinnerSubcat.selectItemByIndex(binding.placesGroup.getCheckedChipId()+1);
+                            if (!binding.spinnerSubcat.getText().toString().equals("Select"))
+                            {
+                                catid = response.body().getData().get(binding.spinnerSubcat.getSelectedIndex()-1).getId();
+                                getStationsData();
+                            }
+                            else
+                            {
+                                getStationsData();
+                            }
+                            getStationsData();
+                        }
+                    });
+
+
                     //05-04-2023
 //                    binding.placesGroup.check(0);
 //                    binding.spinnerSubcat.check(0);
@@ -805,8 +821,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         jsonObject.addProperty("order", "asc");
 
         jsonObject.addProperty("category", catList.get(binding.spinnerCaseText1.getSelectedItemPosition()).getId());
-//        if (!binding.spinnerSubcat.getText().equals("Select"))
-//            jsonObject.addProperty("subcategory", binding.spinnerSubcat.getText().toString());
+        if (!binding.spinnerSubcat.getText().equals("Select"))
+            jsonObject.addProperty("subcategory", catid);
 
         jsonObject.addProperty("user_id", SharedPrefs.getInstance(getActivity()).getString(Constants.USER_ID));
         jsonObject.addProperty("token", SharedPrefs.getInstance(getActivity()).getString(Constants.TOKEN));
@@ -821,6 +837,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
             @Override
             public void onResponse(Call<StationDataResponse> call, Response<StationDataResponse> response) {
                 try {
+
+
                     CommonUtils.hideLoading();
                     stationDataList = response.body().getData();
 
@@ -1454,16 +1472,9 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
-    }
-
-
-
-    @Override
     public void onResume() {
         super.onResume();
-
+        binding.spinnerSubcat.dismiss();
         if (fusedLocationProviderClient != null) {
 
             startLocationUpdates();
@@ -1490,7 +1501,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         mapmarker.setTag(stationDataModel.getStationid()); // 10 15 5
         loadMarkerIcon(mapmarker, stationDataModel.getBrandIcon());
 
-        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
+        mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 
         mapmarker.showInfoWindow();
 
