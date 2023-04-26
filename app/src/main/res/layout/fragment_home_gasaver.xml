@@ -41,15 +41,18 @@
         android:layout_marginTop="@dimen/_15sdp"
         android:layout_marginStart="@dimen/_15sdp"
         android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+
         >
 
         <Spinner
             android:id="@+id/spinner_caseText1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:layout_weight="1"
+
             android:adjustViewBounds="true"
-            android:background="@drawable/spinner_border_background"
+            android:background="@drawable/spinner_border_background1"
             app:tint="@color/primaryColor"
             app:drawableTint="@color/primaryColor"
             android:popupBackground="#BEFFFFFF"
@@ -58,27 +61,49 @@
             android:padding="10dp"
             android:spinnerMode="dropdown"
             android:textColor="@color/black"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:fontFamily="@font/quicksand_semibold"
             app:layout_constraintEnd_toEndOf="parent">
         </Spinner>
 
-
+<!--        android:background="@color/blackOpacity50"-->
+<!--        android:background="@color/white"-->
         <com.skydoves.powerspinner.PowerSpinnerView
             android:id="@+id/spinner_subcat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_marginStart="@dimen/_10sdp"
             android:padding="10dp"
             app:spinner_popup_max_height="@dimen/_200sdp"
             android:textColor="@color/black"
-            android:background="#99FFFFFF"
             app:spinner_arrow_tint="@color/Purple"
             android:textSize="10sp"
             android:hint="Select"
             app:fontFamily="@font/quicksand_semibold"
+            android:background="@drawable/spinner_border_background1"
+
+            android:paddingBottom="@dimen/_300sdp"
+            android:dropDownWidth="150dp"
+
+            app:spinner_arrow_gravity="end"
+            app:spinner_arrow_padding="8dp"
+            app:spinner_divider_color="@drawable/spinner_border_background1"
+            app:spinner_divider_show="true"
+            app:spinner_divider_size="0.4dp"
+            app:spinner_item_array="@array/budgets"
+            app:spinner_item_height="46dp"
+            app:spinner_popup_animation="dropdown"
+            app:spinner_popup_background="@drawable/spinner_border_background1"
+            app:spinner_popup_elevation="14dp"
+
+            android:adjustViewBounds="true"
+            app:tint="@color/primaryColor"
+            app:drawableTint="@color/primaryColor"
+            android:popupBackground="#BEFFFFFF"
+
+
             />
 <!--        android:scrollbarSize="@dimen/_2sdp"-->
 

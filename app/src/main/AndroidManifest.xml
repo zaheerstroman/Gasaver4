@@ -193,10 +193,6 @@
         <activity
             android:name=".activity.GraphActivityGeeks"
             android:exported="false" />
-        <activity
-            android:name=".activity.HomeTaksikuActivity"
-            android:exported="false"
-            android:theme="@style/AppTheme" />
 
 
 

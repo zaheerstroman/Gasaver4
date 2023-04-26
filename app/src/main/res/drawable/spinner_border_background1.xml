@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+        <item>
+            <shape
+                android:shape="rectangle">
+                <corners android:radius="20dp" />
+
+                <padding android:left="1dp"
+                    android:top="1dp"
+                    android:right="1dp"
+                    android:bottom="1dp" />
+                <solid android:color="@color/transparent_thick"/>
+
+                <stroke android:width="3dp"
+                    android:color="#ff000000" />
+
+                <corners
+                    android:bottomLeftRadius="30dp"
+                    android:bottomRightRadius="30dp"
+                    android:topLeftRadius="30dp"
+                    android:topRightRadius="30dp" />
+                <solid android:color="#1271BB" />
+
+                <stroke
+                    android:width="5dp"
+                    android:color="#1271BB" />
+
+                <padding
+                    android:bottom="1dp"
+                    android:left="1dp"
+                    android:right="1dp"
+                    android:top="1dp" />
+
+                <solid android:color="#42000000" />
+                <corners android:radius="5dp" />
+
+                <stroke android:width="2dp" android:color="@color/colorTextGray" />
+                <solid android:color="#9EFFFFFF"/>
+            <padding android:bottom="3dp" android:left="5dp" android:right="20dp" android:top="3dp"/>
+        </shape>
+        </item>
+<!--            <item ><bitmap android:gravity="right|center" android:src="@mipmap/dropdown"/>-->
+<!--            </item>-->
+
+        </layer-list>
+    </item>
+</selector>
