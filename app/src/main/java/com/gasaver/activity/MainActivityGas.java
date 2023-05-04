@@ -1,6 +1,7 @@
 package com.gasaver.activity;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
@@ -8,9 +9,13 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -85,6 +90,24 @@ public class MainActivityGas extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //show the activity in full screen
 
 
+
+        //Ask enable gps oncreate/ Location Service Enable:-----------------
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            // GPS is not enabled, prompt the user to enable it
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Location Services Not Enabled");
+            builder.setMessage("Please enable location services to use this feature.");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                    startActivity(intent);
+                }
+            });
+            builder.setNegativeButton("Cancel", null);
+            builder.create().show();
+        }
 
 
         FloatingActionButton fab1 = (FloatingActionButton) findViewById(R.id.btnMenu);

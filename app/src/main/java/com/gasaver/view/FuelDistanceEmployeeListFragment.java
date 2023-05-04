@@ -1,6 +1,5 @@
 package com.gasaver.view;
 
-import static androidx.fragment.app.FragmentManager.TAG;
 import static com.facebook.FacebookSdk.getApplicationContext;
 
 import androidx.annotation.NonNull;
@@ -9,7 +8,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -23,7 +21,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -38,7 +35,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-import com.gasaver.activity.DirectionActivity;
 import com.gasaver.activity.MainPickmanActivity;
 import com.gasaver.databinding.ActivityFuelDistanceEmployeeListActivityityBinding;
 import com.gasaver.fragment.HomeFragmentGasaver;
@@ -117,10 +113,34 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
                 holder.iv_wishlist1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        saveWishlist(stationDataModel, stationDataModel.getId(), stationDataModel.getWishlist() != null && stationDataModel.getWishlist().equalsIgnoreCase("Yes") ? "No" : "Yes", holder.iv_wishlist1);
+//                        saveWishlist(stationDataModel, stationDataModel.getId(), stationDataModel.getWishlist() != null && stationDataModel.getWishlist().equalsIgnoreCase("Yes") ? "No" : "Yes", holder.iv_wishlist1);
+//                        saveWishlist(stationDataModel, stationDataModel.getId(), stationDataModel.getWishlist() != null && stationDataModel.getWishlist().equalsIgnoreCase("Yes") ? "No" : "Yes", holder.iv_wishlist1, holder.ivShare);
+                        saveWishlist(stationDataModel, stationDataModel.getId(), stationDataModel.getWishlist() != null && stationDataModel.getWishlist().equalsIgnoreCase("Yes") ? "No" : "Yes", holder.iv_wishlist1, holder.iv_share);
+
+
 
                     }
                 });
+
+                holder.ivShare.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        try {
+                            Intent i = new Intent(Intent.ACTION_SEND);
+                            i.setType("text/plain");
+                            i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                            String sAux = "\nJust clicked & install this application:\n\n";
+//
+//                    sAux = sAux + "https://play.google.com/store/apps/details?id=org.halalscan.jss\n\n";
+                            sAux = sAux + " https://play.google.com/store/apps/details?id=com.pineconesoft.petrolspy&pli=1\n\n";
+                            i.putExtra(Intent.EXTRA_TEXT, sAux);
+                            startActivity(Intent.createChooser(i, "Choose One"));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
 
                 List<StationDataResponse.PriceModel> prices = stationDataModel.getPrices();
                 Glide.with(getActivity()).load(stationDataList.get(position).getBrandIcon()).into(holder.iv_proj_img);
@@ -257,15 +277,24 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
 
             binding.tvDistance.setOnClickListener(view -> {
                 HomeFragmentGasaver activity = (HomeFragmentGasaver) HomeFragmentGasaver.context1;
+//                activity.getStationsList("distance", "asc");
                 activity.getStationsList("distance");
+
             });
             binding.tvPriceL.setOnClickListener(view -> {
                 HomeFragmentGasaver activity = (HomeFragmentGasaver) HomeFragmentGasaver.context1;
+//                activity.getStationsList("price","asc");
                 activity.getStationsList("price");
+
             });
 
 //            holder.txtPrices.append(stationDataList.get(position).getPrices().get(position).getAmount());
 
+
+            //Single Last Updated
+            holder.txtLastUpdated.setText("Last Updated.. ");
+
+            //Double trible values
             holder.txtLastUpdated.append(stationDataList.get(1).getPrices().get(position).getLastupdated());
 
         }
@@ -279,7 +308,7 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
 
             LinearLayout layoutid;
 
-            ImageView iv_wishlist1, iv_proj_img;
+            ImageView iv_wishlist1, iv_proj_img, ivShare, iv_share;
 
             //TextView tv_addr, tv_name, tv_city, tv_price, tv_dis, tv_lastupdated;
             TextView tv_dis, tv_price, tv_name, tv_addr, tv_city, txtPrices, txtLastUpdated;
@@ -296,7 +325,7 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
                 layoutid = itemView.findViewById(R.id.layoutid);
 
                 iv_wishlist1 = itemView.findViewById(R.id.iv_wishlist1);
-
+                ivShare= itemView.findViewById(R.id.iv_share);
                 iv_proj_img = itemView.findViewById(R.id.iv_proj_img);
                 tv_name = itemView.findViewById(R.id.tv_name);
 
@@ -319,7 +348,7 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
         }
     }
 
-    private void saveWishlist(StationDataResponse.StationDataModel stationDataModel, Integer stationid, String iswishlist, ImageView ivWishlist) {
+    private void saveWishlist(StationDataResponse.StationDataModel stationDataModel, Integer stationid, String iswishlist, ImageView ivWishlist, ImageView ivShare) {
 
         CommonUtils.showLoading(getActivity(), "Please Wait", false);
         com.gasaver.network.ApiInterface apiInterface = APIClient.getClient().create(com.gasaver.network.ApiInterface.class);
@@ -343,6 +372,29 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
                         stationDataModel.setWishlist(iswishlist);
 
                         ivWishlist.setImageResource(iswishlist.equalsIgnoreCase("yes") ? R.drawable.wishlist_added : R.drawable.like_icon);
+
+//                        Glide.with(getActivity()).load(stationDataModel.getBrandIcon()).into(binding.ll_brand_req.imgBrand);
+
+                        ivShare.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                try {
+                                    Intent i = new Intent(Intent.ACTION_SEND);
+                                    i.setType("text/plain");
+                                    i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+                                    String sAux = "\nJust clicked & install this application:\n\n";
+//
+//                    sAux = sAux + "https://play.google.com/store/apps/details?id=org.halalscan.jss\n\n";
+                                    sAux = sAux + " https://play.google.com/store/apps/details?id=com.pineconesoft.petrolspy&pli=1\n\n";
+                                    i.putExtra(Intent.EXTRA_TEXT, sAux);
+                                    startActivity(Intent.createChooser(i, "Choose One"));
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        });
+
+
                     }
                 } catch (Exception e) {
                     e.printStackTrace();

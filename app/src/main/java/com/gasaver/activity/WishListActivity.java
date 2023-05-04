@@ -171,6 +171,8 @@ public class WishListActivity extends AppCompatActivity {
                         wishList.remove(stationDataModel);
 //                        wishList.remove(wishlistModel);
                         wishListAdapter.notifyDataSetChanged();
+
+//                        Glide.with(WishListActivity.this).load(stationDataModel.getBrandIcon()).into(binding.llBrandReq.imgBrand);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -519,7 +521,7 @@ public class WishListActivity extends AppCompatActivity {
                 iv_wishlist1 = itemView.findViewById(R.id.iv_wishlist1);
                 iv_close = itemView.findViewById(R.id.iv_close);
 
-                iv_share = itemView.findViewById(R.id.iv_close);
+                iv_share = itemView.findViewById(R.id.iv_share);
 
 //                cv_station = itemView.findViewById(R.id.cv_station);
 

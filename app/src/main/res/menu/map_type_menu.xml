@@ -61,17 +61,17 @@
         android:id="@+id/btnSetting"
         android:title="Setting" />
 
-    <item
-        android:id="@+id/btnGalary"
-        android:title="Galary" />
+<!--    <item-->
+<!--        android:id="@+id/btnGalary"-->
+<!--        android:title="Galary" />-->
 
     <item
         android:id="@+id/btnPlus"
         android:title="Plus" />
 
-    <item
-        android:id="@+id/btnMaines"
-        android:title="Maines" />
+<!--    <item-->
+<!--        android:id="@+id/btnMaines"-->
+<!--        android:title="Maines" />-->
 
 
 </menu>

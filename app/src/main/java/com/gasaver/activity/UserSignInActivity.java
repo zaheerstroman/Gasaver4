@@ -116,7 +116,6 @@ public class UserSignInActivity extends AppCompatActivity implements TextWatcher
                 }
             }
         });
-
     }
 
     private boolean isAllFieldsValidated() {

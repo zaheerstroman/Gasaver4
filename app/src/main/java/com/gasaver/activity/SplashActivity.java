@@ -4,16 +4,21 @@ import static com.gasaver.utils.Constants.REQUEST_LOCATION;
 import static com.gasaver.utils.Constants.USER_ID;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 
 import android.Manifest;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -30,10 +35,14 @@ SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+//        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash_screen1);
 
         Bundle bundle = getIntent().getExtras();
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+
+
 
 
         if (bundle != null && bundle.get("data") != null) {
@@ -59,12 +68,24 @@ SplashActivity extends AppCompatActivity {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //launch app
                 launchApp();
+
             } else {
                 Toast.makeText(this, "Location permission denied", Toast.LENGTH_LONG).show();
                 finish();
             }
+
+
         }
     }
+
+
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == REQUEST_LOCATION_SETTINGS && resultCode == RESULT_OK) {
+//            // The user enabled GPS, do something
+//        }
+//    }
+
 
     private void launchApp() {
         new Handler().postDelayed(new Runnable() {

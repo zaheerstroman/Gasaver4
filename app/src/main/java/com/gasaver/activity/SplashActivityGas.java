@@ -16,7 +16,9 @@ public class SplashActivityGas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_gas);
+//        setContentView(R.layout.activity_splash_gas);
+        setContentView(R.layout.activity_splash_screen1);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         new Handler().postDelayed(new Runnable() {

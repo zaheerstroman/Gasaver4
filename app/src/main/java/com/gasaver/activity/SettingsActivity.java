@@ -80,9 +80,16 @@ public class SettingsActivity extends AppCompatActivity {
                 CommonUtils.hideLoading();
                 if (response.body().isStatus_code()) {
 
+
+//                    https://houseofspiritshyd.in/gasaver/admin/api/userSettings
+//                    +
+                    //https://houseofspiritshyd.in/gasaver/admin/api/getUserData
+
                     SharedPrefs.getInstance(SettingsActivity.this).saveBoolean(Constants.allow_email, binding.switchEmailNot.isChecked());
                     SharedPrefs.getInstance(SettingsActivity.this).saveBoolean(Constants.allow_sms, binding.switchSmsNot.isChecked());
                     SharedPrefs.getInstance(SettingsActivity.this).saveBoolean(Constants.allow_push, binding.switchPushNoti.isChecked());
+
+
 
                 }
             }

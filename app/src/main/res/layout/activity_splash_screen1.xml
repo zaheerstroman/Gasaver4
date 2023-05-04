@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:background="@drawable/splash_screen_ali_1080_1920">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:scrollbarSize="20dp"
-        android:src="@drawable/splash_screen_gas_saver"
-        android:background="@color/black"
-        tools:ignore="ContentDescription" />
+<!--android:background="@drawable/splash_screen_ali_1080_1920_figma_1">-->
 
-</LinearLayout>
+
+</RelativeLayout>
