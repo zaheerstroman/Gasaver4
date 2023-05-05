@@ -39,9 +39,11 @@
         android:layout_below="@+id/edit_search"
         android:id="@+id/DropdownHolder"
         android:layout_marginTop="@dimen/_15sdp"
-        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_15sdp"
         android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
 
         >
 
@@ -57,7 +59,7 @@
             app:drawableTint="@color/primaryColor"
             android:popupBackground="#BEFFFFFF"
             android:gravity="center"
-            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginStart="02dp"
             android:padding="10dp"
             android:spinnerMode="dropdown"
             android:textColor="@color/black"
@@ -103,6 +105,7 @@
             android:popupBackground="#BEFFFFFF"
             android:spinnerMode="dropdown"
             android:textSize="12sp"
+            android:paddingRight="05dp"
 
 
             />

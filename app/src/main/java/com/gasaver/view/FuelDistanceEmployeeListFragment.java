@@ -1,6 +1,8 @@
 package com.gasaver.view;
 
 import static com.facebook.FacebookSdk.getApplicationContext;
+import static com.gasaver.fragment.HomeFragmentGasaver.asc;
+import static com.gasaver.fragment.HomeFragmentGasaver.price_asc;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -118,7 +120,6 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
                         saveWishlist(stationDataModel, stationDataModel.getId(), stationDataModel.getWishlist() != null && stationDataModel.getWishlist().equalsIgnoreCase("Yes") ? "No" : "Yes", holder.iv_wishlist1, holder.iv_share);
 
 
-
                     }
                 });
 
@@ -207,7 +208,6 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
 //                }
 
 
-
                 try {
                     double distance = SphericalUtil.computeDistanceBetween(new LatLng(cuLocation.getLatitude(), cuLocation.getLongitude()), new LatLng(Double.parseDouble(stationDataModel.getLatitude()), Double.parseDouble(stationDataModel.getLongitude())));
 
@@ -275,18 +275,68 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
             }
 
 
+            //Ascending & Descending
+            if (asc) {
+                binding.ivDistanceUpdownAscDesc.setRotation(0);
+
+
+            } else if (!asc) {
+                binding.ivDistanceUpdownAscDesc.setRotation(180);
+            }
+
             binding.tvDistance.setOnClickListener(view -> {
                 HomeFragmentGasaver activity = (HomeFragmentGasaver) HomeFragmentGasaver.context1;
-//                activity.getStationsList("distance", "asc");
-                activity.getStationsList("distance");
+
+                if (asc) {
+                    binding.ivDistanceUpdownAscDesc.setRotation(0);
+                    activity.getStationsList("distance", "asc");
+                    asc = false;
+                } else if (!asc) {
+                    binding.ivDistanceUpdownAscDesc.setRotation(180);
+                    activity.getStationsList("distance", "desc");
+                    asc = true;
+                }
+
 
             });
+
+            if (price_asc) {
+                binding.ivPriceUpdownAscDesc.setRotation(0);
+
+
+            } else if (!price_asc) {
+                binding.ivPriceUpdownAscDesc.setRotation(180);
+            }
+
             binding.tvPriceL.setOnClickListener(view -> {
                 HomeFragmentGasaver activity = (HomeFragmentGasaver) HomeFragmentGasaver.context1;
+                if (price_asc) {
+                    binding.ivPriceUpdownAscDesc.setRotation(0);
 //                activity.getStationsList("price","asc");
-                activity.getStationsList("price");
+                    activity.getStationsList("price", "asc");
+                    price_asc = false;
+
+                }else if (!price_asc) {
+                    binding.ivPriceUpdownAscDesc.setRotation(180);
+                    activity.getStationsList("distance", "desc");
+                    price_asc = true;
+
+                }
+
 
             });
+
+
+//            binding.tvPriceL.setOnClickListener(view -> {
+//                HomeFragmentGasaver activity = (HomeFragmentGasaver) HomeFragmentGasaver.context1;
+////                activity.getStationsList("price","asc");
+//                activity.getStationsList("price", "asc");
+//
+//            });
+
+
+//
+
 
 //            holder.txtPrices.append(stationDataList.get(position).getPrices().get(position).getAmount());
 
@@ -306,26 +356,38 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
 
         public class ViewHolder extends RecyclerView.ViewHolder {
 
-            LinearLayout layoutid;
+            LinearLayout layoutid, ll_form, layout_distance, layout_price, layout_km_dollar, recyclerview_markers_list, ll_delete_my_prop;
 
-            ImageView iv_wishlist1, iv_proj_img, ivShare, iv_share;
+            ImageView iv_wishlist1, iv_proj_img, ivShare, iv_share, iv_distance_updown_asc_desc, iv_price_updown_asc_desc;
 
             //TextView tv_addr, tv_name, tv_city, tv_price, tv_dis, tv_lastupdated;
             TextView tv_dis, tv_price, tv_name, tv_addr, tv_city, txtPrices, txtLastUpdated;
 
             AppCompatButton btn_submit_prices, btn_navigate;
-            LinearLayout ll_delete_my_prop;
 
             public ViewHolder(@NonNull View itemView) {
                 super(itemView);
+                ll_form = itemView.findViewById(R.id.ll_form);
+                layout_distance = itemView.findViewById(R.id.layout_distance);
+                layout_price = itemView.findViewById(R.id.layout_price);
+                layout_km_dollar = itemView.findViewById(R.id.layout_km_dollar);
+                ll_delete_my_prop = itemView.findViewById(R.id.ll_delete_my_prop);
+                ll_delete_my_prop.setVisibility(View.GONE);
+
+                recyclerview_markers_list = itemView.findViewById(R.id.recyclerview_markers_list);
+
 
                 tv_dis = itemView.findViewById(R.id.tv_distance);
                 tv_price = itemView.findViewById(R.id.tv_price_L);
 
+                iv_distance_updown_asc_desc = itemView.findViewById(R.id.iv_distance_updown_asc_desc);
+                iv_price_updown_asc_desc = itemView.findViewById(R.id.iv_price_updown_asc_desc);
+
+
                 layoutid = itemView.findViewById(R.id.layoutid);
 
                 iv_wishlist1 = itemView.findViewById(R.id.iv_wishlist1);
-                ivShare= itemView.findViewById(R.id.iv_share);
+                ivShare = itemView.findViewById(R.id.iv_share);
                 iv_proj_img = itemView.findViewById(R.id.iv_proj_img);
                 tv_name = itemView.findViewById(R.id.tv_name);
 
@@ -342,8 +404,6 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
                 btn_navigate = itemView.findViewById(R.id.btn_navigate);
 
 
-                ll_delete_my_prop = itemView.findViewById(R.id.ll_delete_my_prop);
-                ll_delete_my_prop.setVisibility(View.GONE);
             }
         }
     }

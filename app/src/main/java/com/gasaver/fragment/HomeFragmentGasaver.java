@@ -246,6 +246,9 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
     //Game App Studio Map Direction:----
 
+    public static boolean asc ;
+    public static boolean price_asc ;
+
     //   private GoogleMap map;
     private ApiInterface apiInterface;
     private List<LatLng> polylinelist;
@@ -407,9 +410,9 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 //                        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
 //                        break;
 //
-                    case R.id.btnPlus:
-                        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
-                        break;
+//                    case R.id.btnPlus:
+//                        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+//                        break;
 //
 //                    case R.id.btnMaines:
 //                        mGoogleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
@@ -430,7 +433,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                 showBottomSheet();
             }
         });
-
 
 
         binding.enableTraffic.setOnClickListener(view -> {
@@ -530,7 +532,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         // Define an array of city names to use as suggestions
 //        String[] cityNames = new String[]{"New York", "Los Angeles", "Chicago", "Houston", "Philadelphia", "Phoenix", "San Antonio", "San Diego", "Dallas", "San Jose"};
         String[] cityNames = new String[]{"Sydney", "Melbourne", "Canberra", "Brisbane", "Adelaide", "Perth", "Darwin", "Hobart", "Newcastle", "Cairns",
-                "Townsville", "Geelong","Wollongong", "Gold Coast", "Ballarat","Bundaberg","Bendigo","Bathurst","Albany","Bunbury","Mackay","Dubbo", "Orange"};
+                "Townsville", "Geelong", "Wollongong", "Gold Coast", "Ballarat", "Bundaberg", "Bendigo", "Bathurst", "Albany", "Bunbury", "Mackay", "Dubbo", "Orange"};
 
 // Create an ArrayAdapter to provide the suggestions
         ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_dropdown_item_1line, cityNames);
@@ -543,8 +545,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         autoCompleteTextView.setThreshold(1);
 
 // Set a listener to handle the user's selection of a suggestion
-
-
 
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -608,7 +608,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                 LatLng latLng = new LatLng(lat, lng);
 
 //                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+                mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 
                 String city = address.getLocality();
                 String country = address.getCountryName();
@@ -827,7 +827,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                     binding.spinnerSubcat.selectItemByIndex(0);
 
 
-
                     binding.spinnerSubcat.setOnSpinnerItemSelectedListener(new OnSpinnerItemSelectedListener<String>() {
                         @Override
                         public void onItemSelected(int oldIndex, @Nullable String oldItem, int newIndex, String newItem) {
@@ -849,7 +848,10 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                                 getStationsData();
 
                                 //03-05-2023 Changes
-                                if (stationDataList == null || stationDataList.isEmpty())
+//                                if (stationDataList == null || stationDataList.isEmpty())
+//                                    Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
+
+                                if (stationDataList.get(1).getDefault_data() == null || stationDataList.get(1).getDefault_data().isEmpty())
                                     Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
 
                             } else {
@@ -952,7 +954,10 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                         defaultDataModels.add(defaultDataModel);
                     }
 
-                    if (stationDataList == null || stationDataList.isEmpty())
+ //           if (stationDataList == null || stationDataList.isEmpty())
+//            Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
+
+                    if (stationDataList.get(1).getDefault_data() == null || stationDataList.get(1).getDefault_data().isEmpty())
                         Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
 
                     mGoogleMap.setInfoWindowAdapter(new InfoWindowAdapter(requireContext(), defaultDataModels));
@@ -985,7 +990,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
     }
 
-    public void getStationsList(String sortby) {
+    public void getStationsList(String sortby, String order) {
 
 //    public void getStationsList(String sortby, String order) {
 
@@ -1004,9 +1009,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
         //Assending & Dessending Both we want
 //        jsonObject.addProperty("order", order);
-        jsonObject.addProperty("order", "asc");
+        jsonObject.addProperty("order", order);
 //        jsonObject.addProperty("order", "desc");
-
 
 
         jsonObject.addProperty("category", catList.get(binding.spinnerCaseText1.getSelectedItemPosition()).getId());
@@ -1016,8 +1020,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 //            jsonObject.addProperty("subcategory", subcatList.get(binding.spinnerSubcat.getSelectedItemPosition() - 1).getId());
 
 //        Ali
-          if (!binding.spinnerSubcat.getText().equals("Select"))
-                    jsonObject.addProperty("subcategory", catid);
+        if (!binding.spinnerSubcat.getText().equals("Select"))
+            jsonObject.addProperty("subcategory", catid);
 
         jsonObject.addProperty("user_id", SharedPrefs.getInstance(getActivity()).getString(Constants.USER_ID));
         jsonObject.addProperty("token", SharedPrefs.getInstance(getActivity()).getString(Constants.TOKEN));
@@ -1033,6 +1037,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
             public void onResponse(Call<StationDataResponse> call, Response<StationDataResponse> response) {
 
                 try {
+
+                    Log.e(TAG, response.body().getData().get(1).toString());
 
                     CommonUtils.hideLoading();
 
@@ -1056,10 +1062,14 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                         // Add the current default data object to the list
                         defaultDataModels.add(defaultDataModel);
                     }
-                    if (stationDataList == null || stationDataList.isEmpty())
+
+                    if (stationDataList.get(1).getDefault_data() == null || stationDataList.get(1).getDefault_data().isEmpty())
                         Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
 
-                    mGoogleMap.setInfoWindowAdapter(new InfoWindowAdapter(requireContext(),defaultDataModels));
+//                    if (stationDataList == null || stationDataList.isEmpty())
+//                        Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
+
+                    mGoogleMap.setInfoWindowAdapter(new InfoWindowAdapter(requireContext(), defaultDataModels));
 
 //                    DefaultDataModel
                     for (StationDataResponse.StationDataModel stationDataModel : stationDataList) {
@@ -1336,8 +1346,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 //        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
 //        mapIntent.setPackage("com.google.android.apps.maps");
 //        startActivity(mapIntent);
-
-
 
 
 //      ---------------------------
@@ -1670,13 +1678,12 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 //                    mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
 //        }
 
-        if (!binding.spinnerSubcat.getText().toString().equals("Select") && !binding.editSearch.getText().toString().isEmpty()){
+        if (!binding.spinnerSubcat.getText().toString().equals("Select") && !binding.editSearch.getText().toString().isEmpty()) {
             mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
         }
 
         if (stationDataList == null || stationDataList.isEmpty())
             Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
-
 
 
         mapmarker.showInfoWindow();
@@ -2225,5 +2232,9 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         alert.show();
     }
 
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 }

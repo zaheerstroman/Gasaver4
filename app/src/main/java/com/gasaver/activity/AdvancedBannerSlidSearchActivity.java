@@ -14,6 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Outline;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewOutlineProvider;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -59,10 +61,12 @@ public class AdvancedBannerSlidSearchActivity extends AppCompatActivity {
     RecyclerView recyclerview_Company_Logos;
     private int[] imageIds = new int[]{
 
-            R.drawable.profile_img,
-            R.drawable.profile_img,
-            R.drawable.profile_img
+            R.drawable.gas_sever_icons,
+            R.drawable.gas_sever_icons2,
+            R.drawable.gas_sever_icons3
     };
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -276,6 +280,16 @@ public class AdvancedBannerSlidSearchActivity extends AppCompatActivity {
             super(itemView);
             companyLogoImageView = itemView.findViewById(R.id.iv_profile_img);
         }
+    }
+
+    public void changeColor(){
+        ImageButton btn1 = (ImageButton) findViewById(R.id.iv_profile_img);
+        btn1.setBackgroundColor(Color.GREEN);
+    }
+
+    public void changeColor(View view){
+        ImageButton btn1 = (ImageButton) findViewById(R.id.iv_profile_img);
+        btn1.setBackgroundColor(Color.GREEN);
     }
     public class ImageAdapter extends PagerAdapter {
 

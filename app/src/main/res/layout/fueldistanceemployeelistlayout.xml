@@ -36,6 +36,7 @@
 
             <!--        android:src="@drawable/close_grey_icon"-->
             <ImageView
+
                 android:id="@+id/iv_close"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
@@ -319,6 +320,7 @@
 
 
         <LinearLayout
+            android:visibility="gone"
             android:id="@+id/ll_delete_my_prop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

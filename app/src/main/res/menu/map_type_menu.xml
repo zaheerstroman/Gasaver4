@@ -65,9 +65,9 @@
 <!--        android:id="@+id/btnGalary"-->
 <!--        android:title="Galary" />-->
 
-    <item
-        android:id="@+id/btnPlus"
-        android:title="Plus" />
+<!--    <item-->
+<!--        android:id="@+id/btnPlus"-->
+<!--        android:title="Plus" />-->
 
 <!--    <item-->
 <!--        android:id="@+id/btnMaines"-->
