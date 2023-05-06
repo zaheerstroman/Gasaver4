@@ -277,6 +277,7 @@ public class AdvancedBannerSlidSearchActivity extends AppCompatActivity {
     {
         ImageView companyLogoImageView;
 
+
         public recyclerview_Company_Logos_ViewHolder(@NonNull View itemView) {
             super(itemView);
             companyLogoImageView = itemView.findViewById(R.id.iv_profile_img);
