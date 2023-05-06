@@ -124,6 +124,7 @@ public class SettingsActivity extends AppCompatActivity {
                     jsonObject.addProperty("token", SharedPrefs.getInstance(SettingsActivity.this).getString(Constants.TOKEN));
 
 
+
                 }
             }
 

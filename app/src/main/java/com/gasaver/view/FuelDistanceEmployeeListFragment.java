@@ -345,7 +345,7 @@ public class FuelDistanceEmployeeListFragment extends BottomSheetDialogFragment 
             holder.txtLastUpdated.setText("Last Updated.. ");
 
             //Double trible values
-            holder.txtLastUpdated.append(stationDataList.get(1).getPrices().get(position).getLastupdated());
+            holder.txtLastUpdated.append(stationDataList.get(0).getPrices().get(position).getLastupdated());
 
         }
 
