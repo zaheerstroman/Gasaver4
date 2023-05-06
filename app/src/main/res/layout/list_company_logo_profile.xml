@@ -10,13 +10,13 @@
 <!--    android:background="@drawable/company_brand_add_bg_rounded_corners"-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_profile_img"
-        android:layout_width="@dimen/_65sdp"
-        android:layout_height="@dimen/_75sdp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="top"
         android:layout_margin="5sp"
         android:paddingTop="20dp"
         app:circularflow_radiusInDP="100"
-        android:src="@drawable/gas_sever_icons"
+        android:src="@drawable/profile_img"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -2,6 +2,7 @@ package com.gasaver.fragment;
 
 //import static androidx.core.app.AppOpsManagerCompat.Api23Impl.getSystemService;
 
+import static android.content.Context.MODE_PRIVATE;
 import static androidx.fragment.app.FragmentManager.TAG;
 import static com.facebook.FacebookSdk.getApplicationContext;
 import static com.itextpdf.text.pdf.PdfName.NM;
@@ -29,6 +30,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -159,6 +161,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.maps.android.SphericalUtil;
@@ -331,25 +334,40 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
 //        Push Notification using FireBase:----------
 
+
+
         context = requireContext();
-        // Create a notification manager
-        NotificationManager notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // Create a notification builder
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), "channel_id")
-                .setSmallIcon(R.drawable.ic_notification)
-                .setContentTitle("GaSaver")
-                .setContentText("Welcome To Gasaver \uD83C\uDF89")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setAutoCancel(true);
+        boolean pushNotificationEnabled = isPushNotificationEnabled();
+        if (pushNotificationEnabled) {
 
-        // Create a notification channel (required for Android Oreo and above)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("channel_id", "Channel Name", NotificationManager.IMPORTANCE_HIGH);
-            notificationManager.createNotificationChannel(channel);
+            // Create a notification manager
+            NotificationManager notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
+//            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+
+            // Create a notification builder
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), "channel_id")
+//            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "channel_id")
+
+                    .setSmallIcon(R.drawable.ic_notification)
+                    .setContentTitle("GaSaver")
+                    .setContentText("Welcome To Gasaver \uD83C\uDF89")
+                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setAutoCancel(true);
+
+//        FirebaseMessaging.getInstance().setAutoInitEnabled(false);
+
+
+            // Create a notification channel (required for Android Oreo and above)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                NotificationChannel channel = new NotificationChannel("channel_id", "Channel Name", NotificationManager.IMPORTANCE_HIGH);
+                notificationManager.createNotificationChannel(channel);
+            }
+            // Show the notification
+            notificationManager.notify(NOTIFICATION_ID, builder.build());
         }
-        // Show the notification
-        notificationManager.notify(NOTIFICATION_ID, builder.build());
+
+
 
 
         //---------------------------------------------------------
@@ -594,6 +612,21 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
         return binding.getRoot();
     }
+
+
+    public boolean isPushNotificationEnabled() {
+        SharedPreferences preferences = requireContext().getSharedPreferences("app_preferences", MODE_PRIVATE);
+//        SharedPrefs preferences = getSharedPreferences("app_preferences", MODE_PRIVATE);
+//        return preferences.getBoolean("push_notification_enabled", true);
+        return preferences.getBoolean("push_notification_enabled", true);
+    }
+
+//    public void setPushNotificationEnabled(boolean enabled) {
+//        SharedPrefs preferences = getSharedPreferences("app_preferences", MODE_PRIVATE);
+//        SharedPrefs.Editor editor = preferences.edit();
+//        editor.putBoolean("push_notification_enabled", enabled);
+//        editor.apply();
+//    }
 
     private void performSearch() {
         AutoCompleteTextView searchEditText = (AutoCompleteTextView) binding.getRoot().findViewById(R.id.edit_search);

@@ -49,7 +49,7 @@ public class FirebaseNotificationService extends FirebaseMessagingService {
                 //15-04-2023:---
 
 //                .setSmallIcon(R.drawable.tproperty_icon)
-                .setContentTitle("T Property")
+                .setContentTitle("Gasaver")
                 .setContentText(messageBody)
                 .setAutoCancel(true)
                 .setSound(defaultSoundUri)

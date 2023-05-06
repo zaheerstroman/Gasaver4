@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.gasaver.R;
 import com.gasaver.Response.BaseResponse;
+import com.gasaver.Response.BaseResponseGasaverTProperty;
 import com.gasaver.databinding.ActivitySettingsBinding;
 import com.gasaver.network.APIClient;
 import com.gasaver.network.ApiInterface;
@@ -53,9 +54,9 @@ public class SettingsActivity extends AppCompatActivity {
 
 
         setContentView(binding.getRoot());
-        binding.switchPushNoti.setChecked(SharedPrefs.getInstance(this).getBoolean(Constants.allow_push));
-        binding.switchSmsNot.setChecked(SharedPrefs.getInstance(this).getBoolean(Constants.allow_sms));
-        binding.switchEmailNot.setChecked(SharedPrefs.getInstance(this).getBoolean(Constants.allow_email));
+        binding.switchPushNoti.setChecked(SharedPrefs.getInstance(this).getBoolean(Constants.allow_push, true));
+        binding.switchSmsNot.setChecked(SharedPrefs.getInstance(this).getBoolean(Constants.allow_sms, true));
+        binding.switchEmailNot.setChecked(SharedPrefs.getInstance(this).getBoolean(Constants.allow_email, true));
         binding.btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +67,8 @@ public class SettingsActivity extends AppCompatActivity {
                 jsonObject.addProperty("allow_sms", binding.switchSmsNot.isChecked() ? "Yes" : "No");
                 jsonObject.addProperty("allow_push", binding.switchPushNoti.isChecked() ? "Yes" : "No");
                 saveUserSettings(jsonObject);
+                saveUserDatSettings(jsonObject);
+
             }
         });
     }
@@ -101,4 +104,35 @@ public class SettingsActivity extends AppCompatActivity {
         });
 
     }
+
+    //ProfileUserDataResponseGasaverT
+
+    private void saveUserDatSettings(JsonObject jsonObject) {
+        CommonUtils.showLoading(SettingsActivity.this, "Please Wait", false);
+        ApiInterface apiInterface = APIClient.getClient().create(ApiInterface.class);
+        Call<BaseResponseGasaverTProperty> call = apiInterface.setUserDatSettings(jsonObject);
+        call.enqueue(new Callback<BaseResponseGasaverTProperty>() {
+            @Override
+            public void onResponse(Call<BaseResponseGasaverTProperty> call, Response<BaseResponseGasaverTProperty> response) {
+                CommonUtils.hideLoading();
+                if (response.body().getStatusCode()) {
+
+
+
+                    JsonObject jsonObject = new JsonObject();
+                    jsonObject.addProperty("user_id", SharedPrefs.getInstance(SettingsActivity.this).getString(Constants.USER_ID));
+                    jsonObject.addProperty("token", SharedPrefs.getInstance(SettingsActivity.this).getString(Constants.TOKEN));
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponseGasaverTProperty> call, Throwable t) {
+                CommonUtils.hideLoading();
+            }
+        });
+
+    }
+
 }

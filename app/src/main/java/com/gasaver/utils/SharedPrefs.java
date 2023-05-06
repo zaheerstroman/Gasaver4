@@ -36,7 +36,7 @@ public class SharedPrefs {
         editor.commit();
     }
 
-    public boolean getBoolean(String key) {
+    public boolean getBoolean(String key, boolean b) {
         return sharedPreferences.getBoolean(key, false);
     }
     public void clearSharedPrefs(){

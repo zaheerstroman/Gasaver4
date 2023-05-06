@@ -146,8 +146,19 @@ public interface ApiInterface {
     @POST("getRewards")
     Call<GetRewardDataResponse> getRewardsData(@Body JsonObject jsonObject);
 
+    //-----------------------------
+
     @POST("userSettings")
     Call<BaseResponse> settUserSettings(@Body JsonObject jsonObject);
+
+    @POST("getUserData")
+//    Call<ProfileUserDataResponseGasaverT> saveUserDatSettings(@Body JsonObject postObj);
+//    Call<ProfileUserDataResponseGasaverT> setUserDatSettings(@Body JsonObject postObj);
+    Call<BaseResponseGasaverTProperty> setUserDatSettings(@Body JsonObject postObj);
+
+
+
+    //--------------------------------------------------
 
     @POST("feedback")
     Call<BaseResponse> feedback(@Body JsonObject jsonObject);
@@ -183,6 +194,7 @@ public interface ApiInterface {
     @POST("copuns")
     Call<CopunsResponse> getCopunsData(@Body JsonObject jsonObject);
 
+    //--
 
 
 }
