@@ -9,7 +9,7 @@ public class StationDataResponse extends BaseResponse{
 
     @SerializedName("result")
     @Expose
-    private ArrayList<StationDataModel> data;
+    public ArrayList<StationDataModel> data;
 
     public ArrayList<StationDataModel> getData() {
         return data;

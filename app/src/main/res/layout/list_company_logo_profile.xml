@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_8sdp"
+    android:layout_marginTop="@dimen/_5sdp"
     android:layout_width="wrap_content"
+    android:layout_centerVertical="true"
     android:layout_height="wrap_content">
 
 
@@ -10,31 +13,11 @@
 <!--    android:background="@drawable/company_brand_add_bg_rounded_corners"-->
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_profile_img"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="top"
-        android:layout_margin="5sp"
-        android:paddingTop="20dp"
-        app:circularflow_radiusInDP="100"
-        android:src="@drawable/profile_img"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/circleImageViewStyle"
-
-        android:layout_marginTop="20dp"
-
-        android:clipToPadding="false"
-        android:scrollbars="none"
-        app:cardCornerRadius="10dp"
-
-        android:onClick="changeColor"
-        android:backgroundTint="@drawable/company_brand_add_bg_rounded_corners"
-
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:foreground="?android:attr/selectableItemBackground"
-        />
+        android:src="@drawable/profile_img" />
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

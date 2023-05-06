@@ -15,21 +15,11 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="@drawable/getting_started_back"
                 android:orientation="vertical">
 
-                <!--            <Spinner-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="wrap_content"-->
-                <!--                android:padding="15dp"-->
-                <!--                android:id="@+id/register_type_spinner"-->
-                <!--                android:spinnerMode="dropdown"-->
-                <!--                android:layout_marginLeft="40dp"-->
-                <!--                android:layout_marginRight="40dp"-->
-                <!--                android:background="@drawable/spinner_border_background"-->
-                <!--                android:layout_marginTop="350dp">-->
-                <!--            </Spinner>-->
+
 
                 <TextView
                     android:id="@+id/welcome_text"
@@ -120,6 +110,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@color/white"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:gravity="center_horizontal">
 
                     <TextView

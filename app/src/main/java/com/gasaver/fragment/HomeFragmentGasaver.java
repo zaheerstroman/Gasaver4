@@ -175,6 +175,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -297,6 +298,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
     // Declare a variable for the cluster manager.
     private ClusterManager<MyItem> clusterManager;
 
+    public StationDataResponse stationDataResponse;
+
     //    private String distance = "distance";
 //    private String distance = "100";
     private String distance = "30";
@@ -343,7 +346,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
             // Create a notification manager
             NotificationManager notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
-//            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
             // Create a notification builder
             NotificationCompat.Builder builder = new NotificationCompat.Builder(requireContext(), "channel_id")
@@ -355,14 +357,11 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                     .setPriority(NotificationCompat.PRIORITY_HIGH)
                     .setAutoCancel(true);
 
-//        FirebaseMessaging.getInstance().setAutoInitEnabled(false);
 
 
             // Create a notification channel (required for Android Oreo and above)
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                NotificationChannel channel = new NotificationChannel("channel_id", "Channel Name", NotificationManager.IMPORTANCE_HIGH);
-                notificationManager.createNotificationChannel(channel);
-            }
+            NotificationChannel channel = new NotificationChannel("channel_id", "Channel Name", NotificationManager.IMPORTANCE_HIGH);
+            notificationManager.createNotificationChannel(channel);
             // Show the notification
             notificationManager.notify(NOTIFICATION_ID, builder.build());
         }
@@ -610,6 +609,8 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
             }
         });
 
+        Handler handler = new Handler(Looper.getMainLooper());
+        handler.postDelayed(this::getStationsData,7000);
         return binding.getRoot();
     }
 
@@ -884,8 +885,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 //                                if (stationDataList == null || stationDataList.isEmpty())
 //                                    Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
 
-                                if (stationDataList.get(1).getDefault_data() == null || stationDataList.get(1).getDefault_data().isEmpty())
-                                    Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
 
                             } else {
                                 getStationsData();
@@ -921,7 +920,9 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
     private void getStationsData() {
 
         //05-04-2023
-        mGoogleMap.clear();
+        if (mGoogleMap != null)
+            mGoogleMap.clear();
+
 
         CommonUtils.showLoading(getActivity(), "Please Wait", false);
 
@@ -987,11 +988,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
                         defaultDataModels.add(defaultDataModel);
                     }
 
- //           if (stationDataList == null || stationDataList.isEmpty())
-//            Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
-
-                    if (stationDataList.get(1).getDefault_data() == null || stationDataList.get(1).getDefault_data().isEmpty())
-                        Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
 
                     mGoogleMap.setInfoWindowAdapter(new InfoWindowAdapter(requireContext(), defaultDataModels));
 
@@ -1004,6 +1000,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Toast.makeText(getActivity(), "No stations found", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -1138,109 +1135,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
     }
 
-
-    public class ProjectAdapter extends RecyclerView.Adapter<ViewHolder> {
-
-        ArrayList<StationDataResponse.StationDataModel> stationDataList;
-
-        //        ArrayList<CategoryModel> agentModels;
-        ArrayList<CategoryModel> catList;
-        ArrayList<CategoryModel> subcatList;
-
-
-        boolean isAgent = false;
-
-        public ProjectAdapter(ArrayList<StationDataResponse.StationDataModel> stationDataList) {
-//            this.latestProperties = latestProperties;
-            this.stationDataList = stationDataList;
-
-        }
-
-        //        public ProjectAdapter(ArrayList<CategoryModel> agentModels, boolean isAgent) {
-        public ProjectAdapter(ArrayList<CategoryModel> catList, boolean isAgent) {
-
-//            this.agentModels = agentModels;
-            this.catList = catList;
-
-            this.isAgent = isAgent;
-        }
-
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_location_marker_item_projects, parent, false);
-            return new ViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            if (isAgent) {
-
-                Glide.with(getActivity()).load(catList.get(position).getName()).into(holder.project_img);
-                holder.project_loc.setVisibility(View.GONE);
-                holder.project_builder.setText(catList.get(position).getId());
-                holder.project_title.setText(catList.get(position).getName());
-
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(catList.get(position).getAttachment()));
-                        startActivity(i);
-                    }
-                });
-            } else {
-//                Glide.with(getActivity()).load(Constants.PROPERTY_IMAGE_URL + latestProperties.get(position).getBrandIcon()).into(holder.project_img);
-                Glide.with(getActivity()).load(Constants.LOGO_IMG_URL + stationDataList.get(position).getBrandIcon()).into(holder.project_img);
-
-
-                holder.project_loc.setText(stationDataList.get(position).getDepartmentId());
-                holder.project_builder.setText(stationDataList.get(position).getBrand());
-                holder.project_title.setText(stationDataList.get(position).getStationid());
-
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), MainPickmanActivity.class);
-//                        intent.putExtra("propertyId", (latestProperties.get(position).getId()));
-                        intent.putExtra("propertyId", (stationDataList.get(position).getId()));
-                        startActivity(intent);
-                    }
-                });
-            }
-        }
-
-        @Override
-        public int getItemViewType(int position) {
-            return position;
-        }
-
-        @Override
-        public int getItemCount() {
-            if (isAgent)
-//                return agentModels.size();
-                return catList.size();
-
-            else
-
-//                return latestProperties.size();
-                return stationDataList.size();
-
-        }
-    }
-
-    private class ViewHolder extends RecyclerView.ViewHolder {
-        TextView project_builder, project_loc, project_title;
-        ImageView project_img;
-
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            project_img = itemView.findViewById(R.id.project_img);
-            project_builder = itemView.findViewById(R.id.project_builder);
-            project_loc = itemView.findViewById(R.id.project_loc);
-            project_title = itemView.findViewById(R.id.project_title);
-        }
-    }
 
 
     private void requestPermision() {
@@ -1684,7 +1578,7 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
 
 
     //    private void initMarker(ArrayList<StationDataResponse.StationDataModel> stationDataList) {
-    private void addMarker(StationDataResponse.StationDataModel stationDataModel) throws ExecutionException, InterruptedException {
+    private void addMarker(StationDataResponse.StationDataModel stationDataModel) {
 
         double smalVal = Double.parseDouble(stationDataModel.getPrices().get(0).getAmount());
         for (StationDataResponse.PriceModel priceModel : stationDataModel.getPrices()) {
@@ -1722,7 +1616,6 @@ public class HomeFragmentGasaver extends Fragment implements OnMapReadyCallback,
         mapmarker.showInfoWindow();
 
     }
-
 
     private void loadMarkerIcon(final Marker marker, String BrandIcon) {
         try {
