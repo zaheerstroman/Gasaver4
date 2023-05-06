@@ -272,6 +272,7 @@ public class AdvancedBannerSlidSearchActivity extends AppCompatActivity {
         }
     }
 
+
     private static class recyclerview_Company_Logos_ViewHolder extends RecyclerView.ViewHolder
     {
         ImageView companyLogoImageView;
